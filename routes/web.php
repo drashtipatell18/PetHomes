@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\PetController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,3 +41,12 @@ Route::post('/category/store', [CategoryController::class, 'storeCategory'])->na
 Route::get('/category/edit/{id}', [CategoryController::class, 'categoryEdit'])->name('edit.category');
 Route::post('/category/update/{id}', [CategoryController::class, 'categoryUpdate'])->name('update.category');
 Route::get('/category/destroy/{id}',[CategoryController::class,'categoryDestroy'])->name('destroy.category');
+
+// Pet
+
+Route::get('/pet', [PetController::class, 'pet'])->name('pet');
+Route::get('/pet/create', [PetController::class, 'createPet'])->name('pet.create');
+Route::post('/pet/store', [PetController::class, 'storePet'])->name('pet.store');
+Route::get('/pet/edit/{id}', [PetController::class, 'PetEdit'])->name('edit.pet');
+Route::post('/pet/update/{id}', [PetController::class, 'PetUpdate'])->name('update.pet');
+Route::get('/pet/destroy/{id}',[PetController::class,'PetDestroy'])->name('destroy.pet');

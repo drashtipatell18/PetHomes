@@ -123,6 +123,7 @@
                     <li><a href="{{ route('dashboard')}}"><span><i class="bi bi-house-door-fill"></i></span>Dashboard</a></li>
                     <li><a href="{{ route('user')}}"><span><i class="bi bi-person-fill"></i></span>User</a></li>
                     <li><a href="{{ route('category')}}"><span><i class="bi bi-bookmarks-fill"></i></span>Category</a></li>
+                    <li><a href="{{ route('pet')}}"><span><i class="bi bi-backpack3-fill"></i></span>Pet</a></li>      
                 </ul>
             </div>
         </div>

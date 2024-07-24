@@ -68,7 +68,7 @@ class CategoryController extends Controller
     }
 
     public function categoryDestroy($id){
-        $category = Category::all();
+        $category = Category::find($id);
         $category->delete();
         session()->flash('danger', 'Category Delete successfully!');
         return redirect()->route('category');
