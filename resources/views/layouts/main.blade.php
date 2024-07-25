@@ -116,14 +116,22 @@
                     <li>
                         <div class="left-bg"></div>
                     </li>
-                    <li class="time">
+                    {{-- <li class="time">
                         <h1 class="animated fadeInLeft">21:00</h1>
                         <p class="animated fadeInRight">Sat,October 1st 2029</p>
-                    </li>
+                    </li> --}}
                     <li><a href="{{ route('dashboard')}}"><span><i class="bi bi-house-door-fill"></i></span>Dashboard</a></li>
                     <li><a href="{{ route('user')}}"><span><i class="bi bi-person-fill"></i></span>User</a></li>
                     <li><a href="{{ route('category')}}"><span><i class="bi bi-bookmarks-fill"></i></span>Category</a></li>
                     <li><a href="{{ route('pet')}}"><span><i class="bi bi-backpack3-fill"></i></span>Pet</a></li>      
+                    <li><a href="{{ route('appointment')}}"><span><i class="bi bi-receipt"></i></span>Appointment</a></li>      
+                    <li><a href="{{ route('service')}}"><span><i class="bi bi-gear-wide-connected"></i></span>Service</a></li>      
+                    <li><a href="{{ route('product')}}"><span><i class="bi bi-hdd-network-fill"></i></span>Product</a></li>      
+                    <li><a href="{{ route('order')}}"><span><i class="bi bi-circle-square"></i></span>Order</a></li>      
+                    <li><a href="{{ route('orderitem')}}"><span><i class="bi bi-circle-square"></i></span>OrderItem</a></li>      
+                    <li><a href="{{ route('wishlist')}}"><span><i class="bi bi-chat-heart-fill"></i></span>Wishlist</a></li>      
+                    <li><a href="{{ route('chatuser')}}"><span><i class="bi bi-chat-left-dots-fill"></i></span>ChatUser</a></li>      
+                    <li><a href="{{ route('chat')}}"><span><i class="bi bi-chat-left-dots-fill"></i></span>Chat</a></li>      
                 </ul>
             </div>
         </div>
