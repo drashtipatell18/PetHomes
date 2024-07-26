@@ -15,10 +15,10 @@ class AppointmentController extends Controller
     }
 
     public function createAppointment(){
-        $categorys = Category::pluck('name','id');
+        $categories = Category::pluck('name','id');
         $services  = Service::pluck('name','id');
         $users  = User::pluck('name','id');
-        return view('appointment.create_appointment',compact('categorys','services','users'));
+        return view('appointment.create_appointment',compact('categories','services','users'));
     }
 
     public function storeAppointment(Request $request){
@@ -46,11 +46,11 @@ class AppointmentController extends Controller
     }
 
     public function AppointmentEdit($id){
-        $categorys = Category::pluck('name','id');
+        $categories = Category::pluck('name','id');
         $services  = Service::pluck('name','id');
         $users  = User::pluck('name','id');
         $appointments = Appointment::find($id);
-        return view('appointment.create_appointment', compact('appointments','pets', 'users', 'categories'));
+        return view('appointment.create_appointment', compact('appointments','services', 'users', 'categories'));
     }
 
     public function AppointmentUpdate(Request $request,$id){

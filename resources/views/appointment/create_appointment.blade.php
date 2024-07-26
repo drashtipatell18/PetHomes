@@ -24,11 +24,11 @@
             <div class="card-header"></div>
             <div class="card-body">
                 <div class="card-title">
-                    <h3 class="text-center title-2">{{ isset($pets) ? 'Edit Pet' : 'Add Pet' }}</h3>
+                    <h3 class="text-center title-2">{{ isset($appointments) ? 'Edit Appointment' : 'Add Appointment' }}</h3>
                 </div>
                 <hr>
-                <form action="{{ isset($pets) ? '/pet/update/' . $pets->id : '/pet/store' }}" method="POST"
-                    enctype="multipart/form-data">
+                <form action="{{ isset($appointments) ? '/appointment/update/' . $appointments->id : '/appointment/store' }}"
+                    method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
                         <label for="user_id" class="control-label mb-1">User Name*</label>
@@ -36,7 +36,8 @@
                             <option value="">Select User</option>
                             @foreach ($users as $id => $name)
                                 <option value="{{ $id }}"
-                                    {{ isset($pets) && $pets->user_id == $id ? 'selected' : '' }}>{{ $name }}
+                                    {{ isset($appointments) && $appointments->user_id == $id ? 'selected' : '' }}>
+                                    {{ $name }}
                                 </option>
                             @endforeach
                         </select>
@@ -54,7 +55,8 @@
                             <option value="">Select Category</option>
                             @foreach ($categories as $id => $name)
                                 <option value="{{ $id }}"
-                                    {{ isset($pets) && $pets->category_id == $id ? 'selected' : '' }}>{{ $name }}
+                                    {{ isset($appointments) && $appointments->category_id == $id ? 'selected' : '' }}>
+                                    {{ $name }}
                                 </option>
                             @endforeach
                         </select>
@@ -66,65 +68,66 @@
                     </div>
                     <div class="form-group">
                         <label for="name" class="control-label mb-1">Pet Name</label>
-                        <input id="name" name="name" type="text" value="{{ old('name', $pets->name ?? '') }}"
-                            class="form-control @error('name') is-invalid @enderror">
-                        @error('name')
+                        <select name="pet_id" id="pet_id" class="form-control @error('pet_id') is-invalid @enderror">
+                            <option value="">Select Pet</option>
+                            @foreach ($categories as $id => $name)
+                                <option value="{{ $id }}"
+                                    {{ isset($appointments) && $appointments->pet_id == $id ? 'selected' : '' }}>
+                                    {{ $name }}
+                                </option>
+                            @endforeach
+                        </select>
+                        @error('pet_id')
                             <span class="invalid-feedback" style="color: red">
                                 <strong>{{ $message }}</strong>
                             </span>
                         @enderror
                     </div>
                     <div class="form-group">
-                        <label for="breed" class="control-label mb-1">Breed</label>
-                        <input id="breed" name="breed" type="text" value="{{ old('breed', $pets->breed ?? '') }}"
-                            class="form-control @error('breed') is-invalid @enderror">
-                        @error('breed')
+                        <label for="breed" class="control-label mb-1">Service Name</label>
+                        <select name="service_id" id="service_id" class="form-control @error('service_id') is-invalid @enderror">
+                            <option value="">Select Service</option>
+                            @foreach ($services as $id => $name)
+                                <option value="{{ $id }}"
+                                    {{ isset($appointments) && $appointments->service_id == $id ? 'selected' : '' }}>
+                                    {{ $name }}
+                                </option>
+                            @endforeach
+                        </select>
+                        @error('service_id')
                             <span class="invalid-feedback" style="color: red">
                                 <strong>{{ $message }}</strong>
                             </span>
                         @enderror
                     </div>
                     <div class="form-group">
-                        <label for="age" class="control-label mb-1">Age</label>
-                        <input id="age" name="age" type="number" value="{{ old('age', $pets->age ?? '') }}"
-                            class="form-control @error('age') is-invalid @enderror">
-                        @error('age')
+                        <label for="date" class="control-label mb-1">date</label>
+                        <input id="date" name="date" type="date" value="{{ old('date', $appointments->date ?? '') }}"
+                            class="form-control @error('date') is-invalid @enderror">
+                        @error('date')
                             <span class="invalid-feedback" style="color: red">
                                 <strong>{{ $message }}</strong>
                             </span>
                         @enderror
                     </div>
                     <div class="form-group">
-                        <label for="health_info" class="control-label mb-1">Health Info</label>
-                        <textarea id="health_info" name="health_info" class="form-control @error('health_info') is-invalid @enderror">{{ old('health_info', $pets->health_info ?? '') }}</textarea>
-                        @error('health_info')
+                        <label for="status" class="control-label mb-1">Status</label>
+                        <select id="status" name="status" class="form-control @error('status') is-invalid @enderror">
+                            <option value="">Select Status</option>
+                            <option value="scheduled" {{ old('status', $appointments->status ?? '') == 'scheduled' ? 'selected' : '' }}>Scheduled</option>
+                            <option value="completed" {{ old('status', $appointments->status ?? '') == 'completed' ? 'selected' : '' }}>Completed</option>
+                            <option value="cancelled" {{ old('status', $appointments->status ?? '') == 'cancelled' ? 'selected' : '' }}>Cancelled</option>
+                        </select>
+                        @error('status')
                             <span class="invalid-feedback" style="color: red">
                                 <strong>{{ $message }}</strong>
                             </span>
                         @enderror
                     </div>
-                    <div class="form-group">
-                        <label for="place" class="control-label mb-1">Place</label>
-                        <input id="place" name="place" type="text" value="{{ old('place', $pets->place ?? '') }}"
-                            class="form-control @error('place') is-invalid @enderror">
-                        @error('place')
-                            <span class="invalid-feedback" style="color: red">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
-                    </div>
-                    <div class="form-group">
-                        <label for="image" class="control-label mb-1">Image</label>
-                        <input type="file" id="profilepicInput" class="form-control" name="image">
-                        @error('image')
-                            <span class="invalid-feedback" style="color: red">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
-                    </div>
+                    
                     <div class="item form-group">
                         <button type="submit" class="btn btn-lg btn-info btn-block">
-                            @if (isset($pets))
+                            @if (isset($appointments))
                                 Update
                             @else
                                 Save
