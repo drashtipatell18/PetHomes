@@ -15,7 +15,7 @@ class OrderController extends Controller
 
     public function createOrder(){
         $users = User::pluck('name','id');
-        return view('order.create_order',compact($users));
+        return view('order.create_order',compact('users'));
     }
 
     public function storeOrder(Request $request){

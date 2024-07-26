@@ -41,16 +41,6 @@
                         @enderror
                     </div>
                     <div class="form-group">
-                        <label for="name" class="control-label mb-1">Name*</label>
-                        <input id="name" name="name" type="text" value="{{ old('name', $products->name ?? '') }}"
-                        class="form-control @error('name') is-invalid @enderror">
-                        @error('name')
-                            <span class="invalid-feedback" style="color: red">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
-                    </div>
-                    <div class="form-group">
                         <label for="description" class="control-label mb-1">Description</label>
                         <textarea id="description" name="description" class="form-control @error('description') is-invalid @enderror">{{ old('description', $products->description ?? '') }}</textarea>
                         @error('description')
