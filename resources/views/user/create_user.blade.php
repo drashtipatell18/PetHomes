@@ -84,11 +84,6 @@
                     <div class="form-group">
                         <label for="image" class="control-label mb-1">Image</label>
                         <input type="file" id="profilepicInput" class="form-control" name="image">
-                        @error('image')
-                            <span class="invalid-feedback" style="color: red">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
                     </div>
                     <div class="item form-group">
                         <button type="submit" class="btn btn-lg btn-info btn-block">

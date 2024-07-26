@@ -7,8 +7,8 @@ use App\Models\Product;
 class ProductController extends Controller
 {
     public function product(){
-       $product = Product::all();
-       return view('product.view_product',compact('product'));
+       $products = Product::all();
+       return view('product.view_product',compact('products'));
     }
 
     public function createProduct(){
@@ -67,8 +67,6 @@ class ProductController extends Controller
             'description'      => $request->input('description'),
             'price'            => $request->input('price'),
             'stock'            => $request->input('stock'),
-            'image'            => $filename
-
         ]);
 
         session()->flash('success', 'Product updated successfully!');
