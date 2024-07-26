@@ -63,8 +63,6 @@ class ServiceController extends Controller
             'name'             => $request->input('name'),
             'description'      => $request->input('description'),
             'price'            => $request->input('price'),
-            'image'            => $filename
-
         ]);
 
         session()->flash('success', 'Service Updated successfully!');
