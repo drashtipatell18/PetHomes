@@ -30,7 +30,7 @@
     <script src="{{ asset('vendor/daterangepicker/moment.min.js') }}"></script>
     <script src="{{ asset('vendor/daterangepicker/daterangepicker.js') }}"></script>
     <script src="{{ asset('vendor/countdowntime/countdowntime.js') }}"></script>
-    <script src="{{ asset('js/main.js') }}"></script>
+    {{-- <script src="{{ asset('js/main.js') }}"></script> --}}
     @stack('scripts')
 
 </body>

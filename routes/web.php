@@ -35,13 +35,13 @@ Route::get('/', function () {
     return redirect()->route('login');
 });
 
-Route::get('/', function () {
-    return view('layouts.main');
-});
+// Route::get('/', function () {
+//     return view('layouts.main');
+// });
 
 Route::get('/login',[HomeController::class,'Login'])->name('login');
 Route::post('/loginstore',[HomeController::class,'LoginStore'])->name('loginstore');
-Route::get('/logout',[HomeController::class,'Logout'])->name('logout');
+Route::post('/logout',[HomeController::class,'Logout'])->name('logout');
 Route::get('/forget-password', [DashboardController::class, 'showForgetPasswordForm'])->name('forget.password');
 Route::post('/forget-password', [DashboardController::class, 'sendResetLinkEmail'])->name('forget.password.email');
 Route::get('/reset/{token}', [DashboardController::class, 'reset'])->name('reset');
@@ -49,7 +49,7 @@ Route::post('/reset/{token}', [DashboardController::class, 'postReset'])->name('
 Route::get('/cpassword',[HomeController::class,'cPassword'])->name('changepass');
 Route::post('/changepassword',[HomeController::class,'changePassword'])->name('changePassword');
 
-Route::middleware(['auth'])->group(function () {
+// Route::middleware(['auth'])->group(function () {
 
 Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
 
@@ -151,4 +151,4 @@ Route::post('/chat/store', [ChatController::class, 'storeChat'])->name('chat.sto
 Route::get('/chat/edit/{id}', [ChatController::class, 'ChatEdit'])->name('edit.chat');
 Route::post('/chat/update/{id}', [ChatController::class, 'ChatUpdate'])->name('update.chat');
 Route::get('/chat/destroy/{id}',[ChatController::class,'ChatDestroy'])->name('destroy.chat');
-});
+// });
