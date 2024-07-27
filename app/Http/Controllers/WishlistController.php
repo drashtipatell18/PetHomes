@@ -22,7 +22,7 @@ class WishlistController extends Controller
 
     public function storeWishlist(Request $request){
         $request->validate([
-            'user_id' => 'user_id',
+            'user_id' => 'required',
             'pet_id' => 'required'
         ]);
 
@@ -44,7 +44,7 @@ class WishlistController extends Controller
 
     public function WishlistUpdate(Request $request, $id){
         $request->validate([
-            'user_id' => 'user_id',
+            'user_id' => 'required',
             'pet_id' => 'required'
         ]);
 
