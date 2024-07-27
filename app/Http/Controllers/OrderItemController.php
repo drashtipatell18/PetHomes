@@ -14,8 +14,8 @@ class OrderItemController extends Controller
     }
 
     public function createOrderItem(){
-        $orders = Order::pluck('id','id');
-        $products = Product::pluck('name','id');
+        $orders = Order::pluck('id','id')->unique();
+        $products = Product::pluck('name','id')->unique();
         return view('orderitem.create_orderitem',compact('products','orders'));
     }
 
@@ -43,8 +43,8 @@ class OrderItemController extends Controller
 
     public function OrderItemEdit($id){
         $orderitems = Order_Item::find($id);
-        $orders = Order::pluck('id','id');
-        $products = Product::pluck('name','id');
+        $orders = Order::pluck('id','id')->unique();
+        $products = Product::pluck('name','id')->unique();
         return view('orderitem.create_orderitem',compact('orderitems','products','orders'));
     }
 

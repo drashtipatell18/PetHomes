@@ -15,8 +15,8 @@ class WishlistController extends Controller
     }
 
     public function createWishlist(){
-        $users = User::pluck('name','id');
-        $pets = Pet::pluck('name','id');
+        $users = User::pluck('name','id')->unique();
+        $pets = Pet::pluck('name','id')->unique();
         return view('wishlist.create_wishlist',compact('users','pets'));
     }
 
@@ -37,8 +37,8 @@ class WishlistController extends Controller
 
     public function WishlistEdit($id){
         $wishlist = Wishlist::find($id);
-        $users = User::pluck('name','id');
-        $pets = Pet::pluck('name','id');
+        $users = User::pluck('name','id')->unique();
+        $pets = Pet::pluck('name','id')->unique();
         return view('wishlist.create_wishlist',compact('wishlist','users','pets'));
     }
 

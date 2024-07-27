@@ -17,8 +17,8 @@ class PetController extends Controller
 
     public function createPet()
     {
-        $users = User::pluck('name', 'id');
-        $categories = Category::pluck('name', 'id');
+        $users = User::pluck('name', 'id')->unique();
+        $categories = Category::pluck('name', 'id')->unique();
         return view('pet.create_pet', compact('users', 'categories'));
     }
 
@@ -58,8 +58,8 @@ class PetController extends Controller
 
     public function PetEdit($id)
     {
-        $users = User::pluck('name', 'id');
-        $categories = Category::pluck('name', 'id');
+        $users = User::pluck('name', 'id')->unique();
+        $categories = Category::pluck('name', 'id')->unique();
         $pets = Pet::find($id);
         return view('pet.create_pet', compact('pets', 'users', 'categories'));
     }

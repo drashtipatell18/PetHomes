@@ -14,7 +14,7 @@ class OrderController extends Controller
     }
 
     public function createOrder(){
-        $users = User::pluck('name','id');
+        $users = User::pluck('name','id')->unique();
         return view('order.create_order',compact('users'));
     }
 
@@ -37,7 +37,7 @@ class OrderController extends Controller
 
     public function OrderEdit($id){
         $orders = Order::find($id);
-        $users = User::pluck('name','id');
+        $users = User::pluck('name','id')->unique();
         return view('service.create_service',compact('orders','users'));
     }
 

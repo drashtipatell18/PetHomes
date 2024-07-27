@@ -14,7 +14,7 @@ class ChatUserController extends Controller
     }
 
     public function createChatUser(){
-        $users = User::pluck('name','id');
+        $users = User::pluck('name','id')->unique();
         return view('chatuser.create_chatuser',compact('users'));
     }
 
@@ -36,7 +36,7 @@ class ChatUserController extends Controller
 
     public function ChatUserEdit($id){
         $chatusers = ChatUser::find($id);
-        $users = User::pluck('name','id');
+        $users = User::pluck('name','id')->unique();
         return view('chatuser.create_chatuser',compact('chatusers','users'));
     }
 
