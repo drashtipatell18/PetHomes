@@ -10,16 +10,19 @@ class OrderItemController extends Controller
 {
     public function orderitem(){
         $orderitems = Order_Item::all();
-        return view('orderitems.view_orderitems',compact('orderitems'));
+        return view('orderitem.view_orderitem',compact('orderitems'));
     }
 
     public function createOrderItem(){
-        $orders = Order::pluck('name','id');
+        $orders = Order::pluck('id','id');
         $products = Product::pluck('name','id');
-        return view('orderitems.create_orderitems',compact('products','orders'));
+        return view('orderitem.create_orderitem',compact('products','orders'));
     }
 
     public function storeOrderItem(Request $request){
+        // echo '<pre>';
+        // print_r($request->all());
+        // echo '</pre>';exit;
         $request->validate([
             'order_id' => 'required',
             'product_id' => 'required',
@@ -40,9 +43,9 @@ class OrderItemController extends Controller
 
     public function OrderItemEdit($id){
         $orderitems = Order_Item::find($id);
-        $orders = Order::pluck('name','id');
+        $orders = Order::pluck('id','id');
         $products = Product::pluck('name','id');
-        return view('orderitems.create_orderitems',compact('orderitems','products','orders'));
+        return view('orderitem.create_orderitem',compact('orderitems','products','orders'));
     }
 
     public function OrderItemUpdate(Request $request, $id){
