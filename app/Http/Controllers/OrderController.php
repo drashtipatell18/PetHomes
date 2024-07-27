@@ -9,7 +9,7 @@ use App\Models\User;
 class OrderController extends Controller
 {
     public function order(){
-        $orders = Order::all();
+        $orders = Order::with('user')->get();
         return view('order.view_order',compact('orders'));
     }
 

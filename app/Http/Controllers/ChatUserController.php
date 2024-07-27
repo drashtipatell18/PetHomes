@@ -9,7 +9,7 @@ use App\Models\User;
 class ChatUserController extends Controller
 {
     public function chatuser(){
-        $chatusers = ChatUser::all();
+        $chatusers = ChatUser::with(['user1', 'user2'])->get();
         return view('chatuser.view_chatuser',compact('chatusers'));
     }
 

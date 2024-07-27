@@ -10,5 +10,20 @@ class Pet extends Model
 {
     use HasFactory, SoftDeletes;
     protected $table = 'pets';
-    protected $fillable = ['user_id','category_id','name','breed','age','health_info','place'];
+    protected $fillable = ['user_id', 'category_id', 'name', 'breed', 'age', 'health_info', 'place'];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
+    public function wishlists()
+    {
+        return $this->hasMany(Wishlist::class);
+    }
 }

@@ -9,7 +9,7 @@ use App\Models\Product;
 class OrderItemController extends Controller
 {
     public function orderitem(){
-        $orderitems = Order_Item::all();
+        $orderitems = Order_Item::with(['order', 'product'])->get();
         return view('orderitem.view_orderitem',compact('orderitems'));
     }
 

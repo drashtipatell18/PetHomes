@@ -12,4 +12,14 @@ class Chat extends Model
     protected $table = 'chats';
     protected $fillable = ['sender_id','receiver_id','chat','attchment'];
 
+    public function sender()
+    {
+        return $this->belongsTo(User::class, 'sender_id');
+    }
+
+    public function receiver()
+    {
+        return $this->belongsTo(User::class, 'receiver_id');
+    }
+
 }

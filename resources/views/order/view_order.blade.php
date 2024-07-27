@@ -47,7 +47,7 @@
                         @foreach ($orders as $index => $order)
                         <tr class="">
                             <td class="text-center">{{ $index + 1 }}</td>
-                            <td class="text-center">{{ $order->date }}</td>
+                            <td class="text-center">{{ $order->user->name }}</td>
                             <td class="text-center">{{ $order->date }}</td>
                             <td class="text-center">{{ $order->status }}</td>
                             <td class="text-center">

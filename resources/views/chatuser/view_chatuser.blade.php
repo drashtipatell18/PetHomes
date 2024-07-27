@@ -47,8 +47,8 @@
                         @foreach ($chatusers as $index => $chatuser)
                         <tr class="">
                             <td class="text-center">{{ $index + 1 }}</td>
-                            <td class="text-center">{{ $index + 1 }}</td>
-                            <td class="text-center">{{ $index + 1 }}</td>
+                            <td class="text-center">{{ $chatuser->user1->name }}</td>
+                            <td class="text-center">{{ $chatuser->user2->name }}</td>
                             <td class="text-center">{{ $chatuser->status }}</td>
                             <td class="text-center">
                                 <a href="{{ route('edit.chatuser', $chatuser->id) }}"

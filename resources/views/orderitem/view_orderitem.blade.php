@@ -48,8 +48,8 @@
                         @foreach ($orderitems as $index => $orderitem)
                         <tr class="">
                             <td class="text-center">{{ $index + 1 }}</td>
-                            <td class="text-center">{{ $orderitem->price }}</td>
-                            <td class="text-center">{{ $orderitem->price }}</td>
+                            <td class="text-center">{{ $orderitem->order->id }}</td>
+                            <td class="text-center">{{ $orderitem->product->name }}</td>
                             <td class="text-center">{{ $orderitem->quantity }}</td>
                             <td class="text-center">{{ $orderitem->price }}</td>
                             <td class="text-center">

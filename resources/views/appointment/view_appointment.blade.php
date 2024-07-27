@@ -50,11 +50,11 @@
                         @foreach ($appointments as $index => $appointment)
                         <tr class="">
                             <td class="text-center">{{ $index + 1 }}</td>
+                            <td class="text-center">{{ $appointment->user->name }}</td>
+                            <td class="text-center">{{ $appointment->category->name }}</td>
+                            <td class="text-center">{{ $appointment->pet->name }}</td>
+                            <td class="text-center">{{ $appointment->service->name }}</td>
                             <td class="text-center">{{ $appointment->date }}</td>
-                            <td class="text-center">{{ $appointment->date }}</td>
-                            <td class="text-center">{{ $appointment->date }}</td>
-                            <td class="text-center">{{ $appointment->status }}</td>
-                            <td class="text-center">{{ $appointment->status }}</td>
                             <td class="text-center">{{ $appointment->status }}</td>
                             <td class="text-center">
                                 <a href="{{ route('edit.appointment', $appointment->id) }}"

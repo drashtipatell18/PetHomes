@@ -11,7 +11,7 @@ class PetController extends Controller
 {
     public function pet()
     {
-        $pets = Pet::all();
+        $pets = Pet::with(['user', 'category'])->get();
         return view('pet.view_pet', compact('pets'));
     }
 

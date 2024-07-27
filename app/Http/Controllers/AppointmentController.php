@@ -7,21 +7,25 @@ use App\Models\Appointment;
 use App\Models\Category;
 use App\Models\Service;
 use App\Models\User;
+
 class AppointmentController extends Controller
 {
-    public function appointment(){
-        $appointments = Appointment::all();
-        return view('appointment.view_appointment',compact('appointments'));
+    public function appointment()
+    {
+        $appointments = Appointment::with(['user', 'category', 'pet', 'service'])->get();
+        return view('appointment.view_appointment', compact('appointments'));
     }
 
-    public function createAppointment(){
-        $categories = Category::pluck('name','id')->unique();
-        $services  = Service::pluck('name','id')->unique();
-        $users  = User::pluck('name','id')->unique();
-        return view('appointment.create_appointment',compact('categories','services','users'));
+    public function createAppointment()
+    {
+        $categories = Category::pluck('name', 'id')->unique();
+        $services  = Service::pluck('name', 'id')->unique();
+        $users  = User::pluck('name', 'id')->unique();
+        return view('appointment.create_appointment', compact('categories', 'services', 'users'));
     }
 
-    public function storeAppointment(Request $request){
+    public function storeAppointment(Request $request)
+    {
         $request->validate([
             'user_id'     => 'required|exists:users,id',
             'category_id' => 'required|exists:categories,id',
@@ -45,15 +49,17 @@ class AppointmentController extends Controller
         return redirect()->route('appointment');
     }
 
-    public function AppointmentEdit($id){
-        $categories = Category::pluck('name','id')->unique();
-        $services  = Service::pluck('name','id')->unique();
-        $users  = User::pluck('name','id')->unique();
+    public function AppointmentEdit($id)
+    {
+        $categories = Category::pluck('name', 'id')->unique();
+        $services  = Service::pluck('name', 'id')->unique();
+        $users  = User::pluck('name', 'id')->unique();
         $appointments = Appointment::find($id);
-        return view('appointment.create_appointment', compact('appointments','services', 'users', 'categories'));
+        return view('appointment.create_appointment', compact('appointments', 'services', 'users', 'categories'));
     }
 
-    public function AppointmentUpdate(Request $request,$id){
+    public function AppointmentUpdate(Request $request, $id)
+    {
         $request->validate([
             'user_id'     => 'required|exists:users,id',
             'category_id' => 'required|exists:categories,id',
@@ -64,7 +70,7 @@ class AppointmentController extends Controller
         ]);
 
         $appointments = Appointment::find($id);
-        
+
         $appointments->update([
             'user_id'     => $request->input('user_id'),
             'category_id' => $request->input('category_id'),
@@ -79,7 +85,8 @@ class AppointmentController extends Controller
         return redirect()->route('appointment');
     }
 
-    public function AppointmentDestroy($id){
+    public function AppointmentDestroy($id)
+    {
         $appointments = Appointment::find($id);
         $appointments->delete();
         session()->flash('danger', 'Appointment Delete successfully!');

@@ -49,8 +49,8 @@
                         @foreach ($pets as $index => $pet)
                         <tr class="">
                             <td class="text-center">{{ $index + 1 }}</td>
-                            <td class="text-center">{{ $pet->name }}</td>
-                            <td class="text-center">{{ $pet->name }}</td>
+                            <td class="text-center">{{ $pet->user->name }}</td>
+                            <td class="text-center">{{ $pet->category->name }}</td>
                             <td class="text-center">{{ $pet->name }}</td>
                             <td class="text-center">{{ $pet->breed }}</td>
                             <td class="text-center">{{ $pet->place }}</td>

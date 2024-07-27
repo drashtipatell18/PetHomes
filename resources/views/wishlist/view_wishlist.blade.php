@@ -46,8 +46,8 @@
                         @foreach ($wishlists as $index => $wishlist)
                         <tr class="">
                             <td class="text-center">{{ $index + 1 }}</td>
-                            <td class="text-center">{{ $index + 1 }}</td>
-                            <td class="text-center">{{ $index + 1 }}</td>
+                            <td class="text-center">{{ $wishlist->user->name }}</td>
+                            <td class="text-center">{{ $wishlist->pet->name }}</td>
                             <td class="text-center">
                                 <a href="{{ route('edit.wishlist', $wishlist->id) }}"
                                     class="btn btn-primary btn-sm"><i class="bi bi-pencil-square"></i></a>

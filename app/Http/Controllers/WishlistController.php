@@ -10,8 +10,8 @@ use App\Models\Pet;
 class WishlistController extends Controller
 {
     public function wishlist(){
-       $wishlists = Wishlist::all(); 
-       return view('wishlist.view_wishlist',compact('wishlists'));
+        $wishlists = Wishlist::with(['user', 'pet'])->get();
+        return view('wishlist.view_wishlist',compact('wishlists'));
     }
 
     public function createWishlist(){
