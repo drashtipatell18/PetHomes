@@ -171,7 +171,8 @@
             color: #976239;
             font-weight: 600;
             text-decoration: none;
-            margin-left: 80px !important;
+            /* margin-right: auto !important; */
+            float: right;
         }
 
         a:hover {

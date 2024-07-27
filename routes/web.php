@@ -41,7 +41,7 @@ Route::get('/', function () {
 
 Route::get('/login',[HomeController::class,'Login'])->name('login');
 Route::post('/loginstore',[HomeController::class,'LoginStore'])->name('loginstore');
-Route::post('/logout',[HomeController::class,'Logout'])->name('logout');
+Route::get('/logout',[HomeController::class,'Logout'])->name('logout');
 Route::get('/forget-password', [DashboardController::class, 'showForgetPasswordForm'])->name('forget.password');
 Route::post('/forget-password', [DashboardController::class, 'sendResetLinkEmail'])->name('forget.password.email');
 Route::get('/reset/{token}', [DashboardController::class, 'reset'])->name('reset');
