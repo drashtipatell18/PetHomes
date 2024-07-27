@@ -27,12 +27,13 @@
                         <h3 class="text-center title-2">{{ isset($category) ? 'Edit Category' : 'Add Category' }}</h3>
                     </div>
                     <hr>
-                    <form action="{{ isset($category) ? '/category/update/' . $category->id : '/category/store' }}" method="POST"
-                        enctype="multipart/form-data">
+                    <form action="{{ isset($category) ? '/category/update/' . $category->id : '/category/store' }}"
+                        method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
                             <label for="name" class="control-label mb-1">Name*</label>
-                            <input id="name" name="name" type="text" value="{{ old('name', $category->name ?? '') }}"
+                            <input id="name" name="name" type="text"
+                                value="{{ old('name', $category->name ?? '') }}"
                                 class="form-control @error('name') is-invalid @enderror">
                             @error('name')
                                 <span class="invalid-feedback" style="color: red">
@@ -41,10 +42,12 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label for="inputImage-edit" class="form-label">Image</label>
-                            <div>
-                                <img id="current-image" src="{{ isset($category) && $category->image ? asset('images/' . $category->image) : '' }}" alt="Current Image" style="width: 20%; max-height: 200px; object-fit: cover; {{ isset($category) && $category->image ? '' : 'display: none;' }}">
-                            </div>
+                            @if (isset($category) && $category->image)
+                                <label for="image" id="imageLabel" class="control-label mb-1 oldimage">Old Image</label>
+                                <img id="oldImage" src="{{ asset('images/' . $category->image) }}" alt="Uploaded Document"
+                                    width="100">
+                                <input type="hidden" class="form-control" name="oldimage" value="{{ $category->image }}">
+                            @endif
                         </div>
                         <div class="form-group">
                             <label for="image" class="control-label mb-1">Image</label>
@@ -74,13 +77,17 @@
     @push('scripts')
         <script>
             $(document).ready(function() {
-                $('#profilepicInput').on('change', function(event) {
-                    if (event.target.files && event.target.files[0]) {
+                $('#profilepicInput').change(function(e) {
+                    var fileName = e.target.files[0];
+                    if (fileName) {
+                        $('#imageLabel').text('New Image'); // Change the label text
+
+                        // Display the new image in the img tag
                         var reader = new FileReader();
                         reader.onload = function(e) {
-                            $('#current-image').attr('src', e.target.result).show();
+                            $('#oldImage').attr('src', e.target.result);
                         }
-                        reader.readAsDataURL(event.target.files[0]);
+                        reader.readAsDataURL(fileName);
                     }
                 });
             });
