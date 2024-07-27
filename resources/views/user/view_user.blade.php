@@ -37,6 +37,7 @@
                     <thead>
                         <tr class="tablehead">
                             <th class="text-center">No</th>
+                            <th class="text-center">Image</th>
                             <th class="text-center">Name</th>
                             <th class="text-center">Email</th>
                             <th class="text-center">Phone</th>
@@ -48,7 +49,7 @@
                         @foreach ($users as $index => $user)
                         <tr class="">
                             <td class="text-center">{{ $index + 1 }}</td>
-                            {{-- <td><img src="{{ asset('images/' .$user->image)}}" class="img-fixed-height" width="100px"></td> --}}
+                            <td class="text-center"><img src="{{ asset('images/' .$user->image)}}" class="img-fixed-height" width="100px" height="100px"></td>
                             <td class="text-center">{{ $user->name }}</td>
                             <td class="text-center">{{ $user->email }}</td>
                             <td class="text-center">{{ $user->phone }}</td>

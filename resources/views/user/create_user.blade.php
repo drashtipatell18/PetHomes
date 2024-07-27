@@ -82,8 +82,21 @@
                         @enderror
                     </div>
                     <div class="form-group">
+                        @if (isset($users) && $users->image)
+                            <label for="image" id="imageLabel" class="control-label mb-1 oldimage">Old Image</label>
+                            <img id="oldImage" src="{{ asset('images/' . $users->image) }}" alt="Uploaded Document"
+                                width="100">
+                            <input type="hidden" class="form-control" name="oldimage" value="{{ $users->image }}">
+                        @endif
+                    </div>
+                    <div class="form-group">
                         <label for="image" class="control-label mb-1">Image</label>
                         <input type="file" id="profilepicInput" class="form-control" name="image">
+                        @error('image')
+                            <span class="invalid-feedback" style="color: red">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
                     </div>
                     <div class="item form-group">
                         <button type="submit" class="btn btn-lg btn-info btn-block">
