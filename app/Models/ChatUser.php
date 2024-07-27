@@ -9,6 +9,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class ChatUser extends Model
 {
     use HasFactory, SoftDeletes;
-    protected $table = 'services';
+    protected $table = 'chat_users';
     protected $fillable = ['user_id1','user_id2','status'];
 }

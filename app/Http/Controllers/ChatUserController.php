@@ -9,7 +9,8 @@ use App\Models\User;
 class ChatUserController extends Controller
 {
     public function chatuser(){
-        return view('chatuser.view_chatuser');
+        $chatusers = ChatUser::all();
+        return view('chatuser.view_chatuser',compact('chatusers'));
     }
 
     public function createChatUser(){
@@ -20,14 +21,13 @@ class ChatUserController extends Controller
     public function storeChatUser(Request $request){
         $request->validate([
             'user_id1' => 'required',
-            'user_id2' => 'required',
-            'status'   => 'required'
+            'user_id2' => 'required'
         ]);
 
         $chatuser = ChatUser::create([
-            'user_id1'  => $request->input('name'),
-            'user_id2'  => $request->input('description'),
-            'status'    => $request->input('status'),
+            'user_id1'  => $request->input('user_id1'),
+            'user_id2'  => $request->input('user_id2'),
+            'status'    => "unread",
         ]);
 
         session()->flash('success', 'Chat User added successfully!');
@@ -43,13 +43,12 @@ class ChatUserController extends Controller
     public function ChatUserUpdate(Request $request, $id) {
         $request->validate([
             'user_id1' => 'required',
-            'user_id2' => 'required',
-            'status'   => 'required'
+            'user_id2' => 'required'
         ]);
         $chatusers = ChatUser::find($id);
         $chatusers->update([
-            'user_id1'  => $request->input('name'),
-            'user_id2'  => $request->input('description'),
+            'user_id1'  => $request->input('user_id1'),
+            'user_id2'  => $request->input('user_id2'),
             'status'    => $request->input('status'),
         ]);
 
