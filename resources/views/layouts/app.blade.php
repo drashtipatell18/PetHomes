@@ -68,8 +68,8 @@
         
         .card-w-h {
             margin-top: 100px;
-            width: 400px;
-            height: 450px;
+            width: 478px;
+            height: 460px;
         }
 
         .card {
@@ -93,7 +93,7 @@
             border-bottom: 2px solid #976239;
             background-color: #E8F0FE;
             outline: none;
-            min-width: 180px;
+            min-width: 200px;
             font-size: 14px;
             transition: all .3s ease-out;
             border-radius: 0;
@@ -153,7 +153,7 @@
         }
 
         .hr {
-            margin-top: 10%;
+            margin-top: 5%;
             margin-bottom: 10%;
             widht: 60%;
         }
@@ -171,14 +171,13 @@
             color: #976239;
             font-weight: 600;
             text-decoration: none;
-            margin-left: 50px !important;
+            margin-left: 80px !important;
         }
 
         a:hover {
             color: #976239;
 
-        }
-
+        } 
         .button {
             width: 100%;
             background-color: transparent;
