@@ -49,9 +49,9 @@ Route::post('/reset/{token}', [DashboardController::class, 'postReset'])->name('
 Route::get('/cpassword',[HomeController::class,'cPassword'])->name('changepass');
 Route::post('/changepassword',[HomeController::class,'changePassword'])->name('changePassword');
 
-Route::middleware(['auth'])->group(function () {
+// Route::middleware(['auth'])->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
 
-Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
 
 // User
 
@@ -151,4 +151,4 @@ Route::post('/chat/store', [ChatController::class, 'storeChat'])->name('chat.sto
 Route::get('/chat/edit/{id}', [ChatController::class, 'ChatEdit'])->name('edit.chat');
 Route::post('/chat/update/{id}', [ChatController::class, 'ChatUpdate'])->name('update.chat');
 Route::get('/chat/destroy/{id}',[ChatController::class,'ChatDestroy'])->name('destroy.chat');
-});
+// });

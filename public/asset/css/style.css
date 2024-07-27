@@ -17,7 +17,7 @@ a:hover {
   -ms-text-decoration: none;
   -o-text-decoration: none;
   text-decoration: none;
-  color: #2196F3;
+  color: #976239;
   font-weight: bold;
 }
 #left-menu li :hover{
@@ -139,7 +139,7 @@ p.quote{
  .bg-purple      {background-color: #9C27B0 !important;}
  .bg-deep-purple {background-color: #673AB7 !important;}
  .bg-indigo      {background-color: #3F51B5 !important;}
- .bg-blue        {background-color: #2196F3 !important;}
+ .bg-blue        {background-color: #976239 !important;}
  .bg-light-blue  {background-color: #03A9F4 !important;}
  .bg-cyan        {background-color: #00BCD4 !important;}
  .bg-teal        {background-color: #009688 !important;}
@@ -307,7 +307,7 @@ p.quote{
 /*end: product grid*/
 
 /*start: Login*/
- .form-signin-wrapper{background: #2196f3 !important;}
+ .form-signin-wrapper{background: #976239 !important;}
  .form-signin{
          max-width: 330px;
          padding: 15px;
@@ -316,7 +316,7 @@ p.quote{
     .form-signin a{color: #fff !important;font-weight: bold;}
     .form-signin .btn{margin-top: 30px;}
     .form-signin .form-group{margin-bottom: 20px !important;}
-    .form-signin .panel{background: #2196f3;color: #fff;padding: 10px;border:none !important;box-shadow: 0 7px 16px #0a86e9, 0 4px 5px #0a86e9;}
+    .form-signin .panel{background: #976239;color: #fff;padding: 10px;border:none !important;box-shadow: 0 7px 16px #0a86e9, 0 4px 5px #0a86e9;}
     .form-signin .panel-body{padding-bottom: 50px;padding-top: 30px;}
     .form-signin .atomic-number{font-size: 20px;}
     .form-signin .atomic-symbol{font-size: 10em !important;font-weight: 500;padding-bottom: 20spx;}
@@ -348,14 +348,14 @@ p.quote{
         .profile-v1 .profile-v1-right .sub-profile-v1-right p{margin-top: -10px;}
         .profile-v1 .profile-v1-right  .sub-profile-v1-right1{padding: 20px;}
         .profile-v1 .profile-v1-right  .sub-profile-v1-right2{color:#fff;background: #6254b2; box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);padding:20px;}
-        .profile-v1 .profile-v1-right  .sub-profile-v1-right3{color:#fff;background: #2196f3;padding: 20px;}
+        .profile-v1 .profile-v1-right  .sub-profile-v1-right3{color:#fff;background: #976239;padding: 20px;}
         .profile-v1 .profile-v1-right  .sub-profile-v1-right3:after{
             position: absolute;
             top: -10px;
             left: 132px;
             display: inline-block;
             border-right: 10px solid transparent;
-            border-bottom: 10px solid  #2196f3;
+            border-bottom: 10px solid  #976239;
             border-left: 10px solid transparent;
             content: '';
         }
@@ -376,7 +376,7 @@ p.quote{
     .search-v1 #tabs-demo6,.search-v1 #tabs-demo6 a{background-color: #fbfbfb !important;}
     .search-v1 .tab-pane{padding: 20px;}
     .search-v1 .search-v1-menu1 .media-left{font-size: 2em;line-height: 0.7;font-weight: bold;padding-top: 10px;}
-    .search-v1 .search-v1-menu1 .media-heading{font-size:17px;color: #2196F3 !important;font-weight: 600 !important;}
+    .search-v1 .search-v1-menu1 .media-heading{font-size:17px;color: #976239 !important;font-weight: 600 !important;}
     .search-v1 .media{padding: 20px;}
     .search-v1 .media:nth-child(2n+2){
       background-color: rgba(0,0,0,0.02) !important;
@@ -736,7 +736,7 @@ ul li a:focus {
   -ms-animation: rippleDate 0.75s linear;
   -o-animation: rippleDate 0.75s linear;
   animation: rippleDate 0.75s linear;
-  background: #2196F3;
+  background: #976239;
 }
 
 /*animation effect*/
@@ -1791,7 +1791,7 @@ ul li a:focus {
 
   .navbar {
     height: 55px;
-    background-color: #2196F3;
+    background-color: #976239;
     color: #fff;
     border: none;
   }
@@ -1942,7 +1942,7 @@ ul li a:focus {
 .user-name {
   padding-top: 15px;
   padding-right: 10px;
-}
+}   
 
 .user-name span {
   font-size: 16px;
@@ -1953,9 +1953,10 @@ ul li a:focus {
 /*-----Left menu-------*/
 #left-menu{}
 #left-menu .left-bg {
-  background: url('../img/left-bg.png');
+  background: url('../img/group-dogs-cat-are-lined-up-row_780838-787.avif');
   background-repeat: repeat-x;
-  height: 100px;
+  background-size: 232px 105px; /* Set width and height of the background image */
+  height: 100px;  
   left: 0;
   position: relative;
   margin-left: -2px;
@@ -2049,15 +2050,15 @@ ul li a:focus {
   float: left;
   padding: 20px;
   padding-top: 35px;
-  background-color: #2196F3;
+  background-color: #976239;
   padding-bottom: 11px;
   color: #C62828;
   cursor: pointer;
-  -webkit-box-shadow: 0px 9px 0px 0px #2196F3, 0 -9px 0px 0px #2196F3, 4px 0 15px -4px rgba(0, 0, 0, 0.16), -4px 0 15px -4px rgba(0, 0, 0, 0.12);
-  -moz-box-shadow: 0px 9px 0px 0px #2196F3, 0 -9px 0px 0px #2196F3, 4px 0 15px -4px rgba(0, 0, 0, 0.16), -4px 0 15px -4px rgba(0, 0, 0, 0.12);
-  -ms-box-shadow: 0px 9px 0px 0px #2196F3, 0 -9px 0px 0px #2196F3, 4px 0 15px -4px rgba(0, 0, 0, 0.16), -4px 0 15px -4px rgba(0, 0, 0, 0.12);
-  -o-box-shadow: 0px 9px 0px 0px #2196F3, 0 -9px 0px 0px #2196F3, 4px 0 15px -4px rgba(0, 0, 0, 0.16), -4px 0 15px -4px rgba(0, 0, 0, 0.12);
-  box-shadow: 0px 9px 0px 0px #2196F3, 0 -9px 0px 0px #2196F3, 4px 0 15px -4px rgba(0, 0, 0, 0.16), -4px 0 15px -4px rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 0px 9px 0px 0px #976239, 0 -9px 0px 0px #976239, 4px 0 15px -4px rgba(0, 0, 0, 0.16), -4px 0 15px -4px rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: 0px 9px 0px 0px #976239, 0 -9px 0px 0px #976239, 4px 0 15px -4px rgba(0, 0, 0, 0.16), -4px 0 15px -4px rgba(0, 0, 0, 0.12);
+  -ms-box-shadow: 0px 9px 0px 0px #976239, 0 -9px 0px 0px #976239, 4px 0 15px -4px rgba(0, 0, 0, 0.16), -4px 0 15px -4px rgba(0, 0, 0, 0.12);
+  -o-box-shadow: 0px 9px 0px 0px #976239, 0 -9px 0px 0px #976239, 4px 0 15px -4px rgba(0, 0, 0, 0.16), -4px 0 15px -4px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 9px 0px 0px #976239, 0 -9px 0px 0px #976239, 4px 0 15px -4px rgba(0, 0, 0, 0.16), -4px 0 15px -4px rgba(0, 0, 0, 0.12);
 }
 
 
@@ -4129,7 +4130,7 @@ ul li a:focus {
 }
 
 .onoffswitch-info .onoffswitch-checkbox:checked + .onoffswitch-label {
-  background-color: #73CAEF;
+  background-color: rgb(151,98,57);
 }
 
 .onoffswitch-warning .onoffswitch-checkbox:checked + .onoffswitch-label {
@@ -5254,7 +5255,7 @@ ul li a:focus {
 }
 
 .nav-tabs.nav-tabs-v4 li.active a{
-  background: #2196f3;
+  background: #976239;
   color: #fff;
   border:none !important;
 }

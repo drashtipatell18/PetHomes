@@ -24,7 +24,7 @@
             <div class="card-header"></div>
             <div class="card-body">
                 <div class="card-title">
-                    <h3 class="text-center title-2">{{ isset($users) ? 'Edit User' : 'Add User' }}</h3>
+                    <h3 class="text-center title-2" style="color:#976239">{{ isset($users) ? 'Edit User' : 'Add User' }}</h3>
                 </div>
                 <hr>
                 <form action="{{ isset($users) ? '/user/update/' . $users->id : '/user/insert' }}" method="POST"
@@ -91,7 +91,7 @@
                         @enderror
                     </div>
                     <div class="item form-group">
-                        <button type="submit" class="btn btn-lg btn-info btn-block">
+                        <button type="submit" class="btn btn-lg btn-block" style="background-color: #976239; color:aliceblue">
                             @if (isset($users))
                                 Update
                             @else

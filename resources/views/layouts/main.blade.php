@@ -23,6 +23,8 @@
 
     <link rel="shortcut icon" href="{{ asset('asset/img/logomi.png') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css">
 </head>
 <style>
     .footer {
@@ -69,7 +71,7 @@
     }
 </style>
 
-<body id="mimin" class="dashboard">
+<body id="mimin" class="dashboard"> 
     <!-- start: Header -->
     <nav class="navbar navbar-default header navbar-fixed-top">
         <div class="col-md-12 nav-wrapper">
@@ -112,18 +114,18 @@
                         <h1 class="animated fadeInLeft">21:00</h1>
                         <p class="animated fadeInRight">Sat,October 1st 2029</p>
                     </li> --}}
-                    <li><a href="{{ route('dashboard')}}"><span><i class="bi bi-house-door-fill"></i></span>Dashboard</a></li>
-                    <li><a href="{{ route('user')}}"><span><i class="bi bi-person-fill"></i></span>User</a></li>
-                    <li><a href="{{ route('category')}}"><span><i class="bi bi-bookmarks-fill"></i></span>Category</a></li>
-                    <li><a href="{{ route('pet')}}"><span><i class="bi bi-backpack3-fill"></i></span>Pet</a></li>      
-                    <li><a href="{{ route('appointment')}}"><span><i class="bi bi-receipt"></i></span>Appointment</a></li>      
-                    <li><a href="{{ route('service')}}"><span><i class="bi bi-gear-wide-connected"></i></span>Service</a></li>      
-                    <li><a href="{{ route('product')}}"><span><i class="bi bi-hdd-network-fill"></i></span>Product</a></li>      
-                    <li><a href="{{ route('order')}}"><span><i class="bi bi-circle-square"></i></span>Order</a></li>      
-                    <li><a href="{{ route('orderitem')}}"><span><i class="bi bi-circle-square"></i></span>OrderItem</a></li>      
-                    <li><a href="{{ route('wishlist')}}"><span><i class="bi bi-chat-heart-fill"></i></span>Wishlist</a></li>      
-                    <li><a href="{{ route('chatuser')}}"><span><i class="bi bi-chat-left-dots-fill"></i></span>ChatUser</a></li>      
-                    <li><a href="{{ route('chat')}}"><span><i class="bi bi-chat-left-dots-fill"></i></span>Chat</a></li>      
+                    <li><a href="{{ route('dashboard')}}" style="color: #976239"><span><i class="bi bi-house-door-fill"></i></span>Dashboard</a></li>
+                    <li><a href="{{ route('user')}}"  style="color: #976239"><span><i class="bi bi-person-fill"></i></span>User</a></li>
+                    <li><a href="{{ route('category')}}"  style="color: #976239"><span><i class="bi bi-bookmarks-fill"></i></span>Category</a></li>
+                    <li><a href="{{ route('pet')}}"  style="color: #976239"><span><i class="bi bi-backpack3-fill"></i></span>Pet</a></li>      
+                    <li><a href="{{ route('appointment')}}" style="color: #976239"><span><i class="bi bi-receipt"></i></span>Appointment</a></li>      
+                    <li><a href="{{ route('service')}}" style="color: #976239"><span><i class="bi bi-gear-wide-connected"></i></span>Service</a></li>      
+                    <li><a href="{{ route('product')}}" style="color: #976239"><span><i class="bi bi-hdd-network-fill"></i></span>Product</a></li>      
+                    <li><a href="{{ route('order')}}" style="color: #976239"><span><i class="bi bi-circle-square"></i></span>Order</a></li>      
+                    <li><a href="{{ route('orderitem')}}" style="color: #976239"><span><i class="bi bi-circle-square"></i></span>OrderItem</a></li>      
+                    <li><a href="{{ route('wishlist')}}" style="color: #976239"><span><i class="bi bi-chat-heart-fill"></i></span>Wishlist</a></li>      
+                    <li><a href="{{ route('chatuser')}}" style="color: #976239"><span><i class="bi bi-chat-left-dots-fill"></i></span>ChatUser</a></li>      
+                    <li><a href="{{ route('chat')}}" style="color: #976239"><span><i class="bi bi-chat-left-dots-fill"></i></span>Chat</a></li>      
                 </ul>
             </div>
         </div>
