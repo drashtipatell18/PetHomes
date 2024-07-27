@@ -34,7 +34,7 @@
                     </div>
                 </div>
                 <div class="table-responsive mt-3">
-                    <table class="table table-sm table-specing">
+                    <table class="table table-sm table-specing" id="myTable">
                         <thead>
                             <tr class="tablehead">
                                 <th class="text-center">No</th>
@@ -77,15 +77,16 @@
 @push('scripts')
     <script>
         $(document).ready(function() {
+            let table = new DataTable('#myTable');
             // Set timeout for success alert
             setTimeout(function() {
                 $('#success-alert').fadeOut('slow');
-            }, 5000); // 5000 milliseconds = 5 seconds
+            }, 1000); // 5000 milliseconds = 5 seconds
 
             // Set timeout for danger alert
             setTimeout(function() {
                 $('#danger-alert').fadeOut('slow');
-            }, 5000); // 5000 milliseconds = 5 seconds
+            }, 1000); // 5000 milliseconds = 5 seconds
         });
     </script>
 @endpush

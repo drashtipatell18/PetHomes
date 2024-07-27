@@ -33,7 +33,7 @@
                 </div>
             </div>
             <div class="table-responsive mt-3">
-                <table class="table table-sm table-specing">
+                <table class="table table-sm table-specing" id="myTable">
                     <thead>
                         <tr class="tablehead">
                             <th class="text-center">No</th>
@@ -70,3 +70,10 @@
     </div>
 </div>
 @endsection
+@push('scripts')
+    <script>
+        $(document).ready(function(e){
+            let table = new DataTable('#myTable');
+        }); 
+    </script>
+@endpush

@@ -12,7 +12,8 @@
 
     <!-- start: Css -->
     <link rel="stylesheet" type="text/css" href="{{ asset('asset/css/bootstrap.min.css') }}">
-
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.1.2/css/dataTables.dataTables.css" />
+  
     <!-- plugins -->
     <link rel="stylesheet" type="text/css" href="{{ asset('asset/css/plugins/font-awesome.min.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{ asset('asset/css/plugins/simple-line-icons.css') }}" />
@@ -319,6 +320,8 @@
 
     <!-- start: Javascript -->
     <script src="{{ asset('asset/js/jquery.min.js') }}"></script>
+    <script src="https://cdn.datatables.net/2.1.2/js/dataTables.js"></script>
+
     <script src="{{ asset('asset/js/jquery.ui.min.js') }}"></script>
     <script src="{{ asset('asset/js/bootstrap.min.js') }}"></script>
 
