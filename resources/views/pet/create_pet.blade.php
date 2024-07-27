@@ -114,6 +114,14 @@
                         @enderror
                     </div>
                     <div class="form-group">
+                        @if (isset($pets) && $pets->image)
+                            <label for="image" id="imageLabel" class="control-label mb-1 oldimage">Old Image</label>
+                            <img id="oldImage" src="{{ asset('images/' . $pets->image) }}" alt="Uploaded Document"
+                                width="100">
+                            <input type="hidden" class="form-control" name="oldimage" value="{{ $pets->image }}">
+                        @endif
+                    </div>
+                    <div class="form-group">
                         <label for="image" class="control-label mb-1">Image</label>
                         <input type="file" id="profilepicInput" class="form-control" name="image">
                         @error('image')
@@ -138,4 +146,21 @@
     </div>
 @endsection
 @push('scripts')
+    <script>
+        $(document).ready(function() {
+            $('#profilepicInput').change(function(e) {
+                var fileName = e.target.files[0];
+                if (fileName) {
+                    $('#imageLabel').text('New Image'); // Change the label text
+
+                    // Display the new image in the img tag
+                    var reader = new FileReader();
+                    reader.onload = function(e) {
+                        $('#oldImage').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(fileName);
+                }
+            });
+        });
+    </script>
 @endpush

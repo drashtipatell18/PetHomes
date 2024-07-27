@@ -9,6 +9,16 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Order_Item extends Model
 {
     use HasFactory, SoftDeletes;
-    protected $table = 'orders';
+    protected $table = 'order__items';
     protected $fillable = ['order_id','product_id','quantity','price'];
+
+    public function order()
+    {
+        return $this->belongsTo(Order::class);
+    }
+
+    public function product()
+    {
+        return $this->belongsTo(Product::class);
+    }
 }

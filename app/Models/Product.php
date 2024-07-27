@@ -10,5 +10,10 @@ class Product extends Model
 {
     use HasFactory, SoftDeletes;
     protected $table = 'products';
-    protected $fillable = ['name','description','price','stock','image'];
+    protected $fillable = ['name', 'description', 'price', 'stock', 'image'];
+
+    public function orderItems()
+    {
+        return $this->hasMany(Order_Item::class);
+    }
 }
