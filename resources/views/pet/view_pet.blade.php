@@ -52,7 +52,15 @@
                                 <tr class="">
                                     <td class="text-center">{{ $index + 1 }}</td>
                                     <td class="text-center"><img src="{{ asset('images/' .$pet->image)}}" class="img-fixed-height" width="100px" height="100px"></td>
-                                    <td class="text-center">{{ $pet->user->name }}</td>
+                                    <td class="text-center">
+                                        @isset($pet->user->name)
+                                            {{$pet->user->name}}
+                                        @endisset
+                                        @php
+                                            if(!isset($pet->user->name))
+                                            {echo "";}
+                                        @endphp
+                                    </td>
                                     <td class="text-center">{{ $pet->category->name }}</td>
                                     <td class="text-center">{{ $pet->name }}</td>
                                     <td class="text-center">{{ $pet->breed }}</td>

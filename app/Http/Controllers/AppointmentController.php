@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pet;
 use Illuminate\Http\Request;
 use App\Models\Appointment;
 use App\Models\Category;
@@ -19,9 +20,10 @@ class AppointmentController extends Controller
     public function createAppointment()
     {
         $categories = Category::pluck('name', 'id')->unique();
+        $pets = Pet::pluck('name', 'id')->unique();
         $services  = Service::pluck('name', 'id')->unique();
         $users  = User::pluck('name', 'id')->unique();
-        return view('appointment.create_appointment', compact('categories', 'services', 'users'));
+        return view('appointment.create_appointment', compact('categories', 'services', 'users', 'pets'));
     }
 
     public function storeAppointment(Request $request)
@@ -52,10 +54,11 @@ class AppointmentController extends Controller
     public function AppointmentEdit($id)
     {
         $categories = Category::pluck('name', 'id')->unique();
+        $pets = Pet::pluck('name', 'id')->unique();
         $services  = Service::pluck('name', 'id')->unique();
         $users  = User::pluck('name', 'id')->unique();
         $appointments = Appointment::find($id);
-        return view('appointment.create_appointment', compact('appointments', 'services', 'users', 'categories'));
+        return view('appointment.create_appointment', compact('appointments', 'services', 'users', 'categories', 'pets'));
     }
 
     public function AppointmentUpdate(Request $request, $id)

@@ -70,7 +70,7 @@
                         <label for="name" class="control-label mb-1">Pet Name</label>
                         <select name="pet_id" id="pet_id" class="form-control @error('pet_id') is-invalid @enderror">
                             <option value="">Select Pet</option>
-                            @foreach ($categories as $id => $name)
+                            @foreach ($pets as $id => $name)
                                 <option value="{{ $id }}"
                                     {{ isset($appointments) && $appointments->pet_id == $id ? 'selected' : '' }}>
                                     {{ $name }}
@@ -124,7 +124,7 @@
                             </span>
                         @enderror
                     </div>
-                    
+
                     <div class="item form-group">
                         <button type="submit" class="btn btn-lg btn-info btn-block">
                             @if (isset($appointments))
