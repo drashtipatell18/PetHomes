@@ -99,6 +99,7 @@
                             aria-haspopup="true" aria-expanded="true" />
                         <ul class="dropdown-menu user-dropdown">
                             <li><a href="#"><span class="fa fa-user"></span> My Profile</a></li>
+                            <li><a href="{{ route('changepass')}}"><span class="fa fa-lock"></span> Change Password</a></li>
                             <li><a href="{{ route('logout')}}"><span class="fa fa-power-off"></span> Logout</a></li>
                         </ul>
                     </li>
