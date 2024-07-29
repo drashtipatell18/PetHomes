@@ -73,6 +73,7 @@
         background-color: #ffffff;
         padding: 10px 10px 10px 10px;
     }
+
     .silder {
         color: #976239;
     }
@@ -88,19 +89,21 @@
                     <span class="middle"></span>
                     <span class="bottom"></span>
                 </div>
-                <a href="{{route('dashboard')}}" class="navbar-brand">
+                <a href="{{ route('dashboard') }}" class="navbar-brand">
                     <b>PET HOMES</b>
                 </a>
 
                 <ul class="nav navbar-nav navbar-right user-nav">
-                    <li class="user-name"><span>{{Auth::user()->name}}</span></li>
+                    <li class="user-name"><span>{{ Auth::user()->name }}</span></li>
                     <li class="dropdown avatar-dropdown">
-                        <img src="/images/{{Auth::user()->image}}" class="img-circle avatar" alt="user name" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="true" />
+                        <img src="/images/{{ Auth::user()->image }}" class="img-circle avatar" alt="user name"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" />
                         <ul class="dropdown-menu user-dropdown">
-                            <li><a href="{{ route('profile.user') }}"><span class="fa fa-user"></span> My Profile</a></li>
-                            <li><a href="{{ route('changepass')}}"><span class="fa fa-lock"></span> Change Password</a></li>
-                            <li><a href="{{ route('logout')}}"><span class="fa fa-power-off"></span> Logout</a></li>
+                            <li><a href="{{ route('profile.user') }}"><span class="fa fa-user"></span> My Profile</a>
+                            </li>
+                            <li><a href="{{ route('changepass') }}"><span class="fa fa-lock"></span> Change
+                                    Password</a></li>
+                            <li><a href="{{ route('logout') }}"><span class="fa fa-power-off"></span> Logout</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -122,29 +125,29 @@
                         <h1 class="animated fadeInLeft">21:00</h1>
                         <p class="animated fadeInRight">Sat,October 1st 2029</p>
                     </li> --}}
-                    <li><a href="{{ route('dashboard') }}" class="silder"><span><i
+                    <li><a href="{{ route('dashboard') }}" style="color: #976239"><span><i
                                     class="bi bi-house-door-fill"></i></span>Dashboard</a></li>
-                    <li><a href="{{ route('user') }}" class="silder"><span><i
+                    <li><a href="{{ route('user') }}" style="color: #976239"><span><i
                                     class="bi bi-person-fill"></i></span>User</a></li>
-                    <li><a href="{{ route('category') }}" class="silder"><span><i
+                    <li><a href="{{ route('category') }}" style="color: #976239"><span><i
                                     class="bi bi-bookmarks-fill"></i></span>Category</a></li>
-                    <li><a href="{{ route('pet') }}" class="silder"><span><i
+                    <li><a href="{{ route('pet') }}" style="color: #976239"><span><i
                                     class="bi bi-backpack3-fill"></i></span>Pet</a></li>
-                    <li><a href="{{ route('appointment') }}" class="silder"><span><i
+                    <li><a href="{{ route('appointment') }}" style="color: #976239"><span><i
                                     class="bi bi-receipt"></i></span>Appointment</a></li>
-                    <li><a href="{{ route('service') }}" class="silder" ><span><i
+                    <li><a href="{{ route('service') }}" style="color: #976239"><span><i
                                     class="bi bi-gear-wide-connected"></i></span>Service</a></li>
-                    <li><a href="{{ route('product') }}" class="silder" ><span><i
+                    <li><a href="{{ route('product') }}" style="color: #976239"><span><i
                                     class="bi bi-hdd-network-fill"></i></span>Product</a></li>
-                    <li><a href="{{ route('order') }}" class="silder"><span><i
+                    <li><a href="{{ route('order') }}" style="color: #976239"><span><i
                                     class="bi bi-circle-square"></i></span>Order</a></li>
-                    <li><a href="{{ route('orderitem') }}" class="silder"><span><i
+                    <li><a href="{{ route('orderitem') }}" style="color: #976239"><span><i
                                     class="bi bi-circle-square"></i></span>OrderItem</a></li>
-                    <li><a href="{{ route('wishlist') }}" class="silder" ><span><i
+                    <li><a href="{{ route('wishlist') }}" style="color: #976239"><span><i
                                     class="bi bi-chat-heart-fill"></i></span>Wishlist</a></li>
-                    <li><a href="{{ route('chatuser') }}" class="silder"><span><i
+                    <li><a href="{{ route('chatuser') }}" style="color: #976239"><span><i
                                     class="bi bi-chat-left-dots-fill"></i></span>ChatUser</a></li>
-                    <li><a href="{{ route('chat') }}" class="silder"><span><i
+                    <li><a href="{{ route('chat') }}" style="color: #976239"><span><i
                                     class="bi bi-chat-left-dots-fill"></i></span>Chat</a></li>
                 </ul>
             </div>
