@@ -91,7 +91,7 @@
                         <img src="asset/img/avatar.jpg" class="img-circle avatar" alt="user name" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="true" />
                         <ul class="dropdown-menu user-dropdown">
-                            <li><a href="#"><span class="fa fa-user"></span> My Profile</a></li>
+                            <li><a href="{{ route('profile.user') }}"><span class="fa fa-user"></span> My Profile</a></li>
                             <li><a href="#"><span class="fa fa-power-off"></span> Logout</a></li>
                         </ul>
                     </li>

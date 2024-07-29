@@ -1,16 +1,57 @@
 @extends('layouts.main')
 
 @section('content')
+<style>
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card-header {
+            color: #976239;
+            font-size: 25px;
+        }
+     .btn-primary {
+            margin-left: auto;
+        }
+
+        .button {
+            background-color: transparent;
+            border: 2px solid #976239;
+            color: #976239;
+            font-weight: bold;
+            font-size: 14px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all .3s ease-out;
+            /* text-transform: uppercase; */
+        }
+        .button:hover {
+            background-color: #976239;
+            color: #fff;
+        }
+</style>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12 col-sm-12">
             <div class="card">
-                <div class="card-header py-3">
+                <div class="header-container d-flex justify-content-between align-items-center">
+                    <div class="card-header py-3" style="color: #976239; font-size: 25px;">
+                        My Profile
+                    </div>
+                    <a href="{{ route('create.user') }}" class="btn btn-sm mt-1 button">
+                        <i class="bi bi-plus-lg mr-5" style="margin-right: 5px"></i> Edit Profile
+                    </a>
+                </div>
+
+                {{-- <div class="card-header py-3">
                     <div class="d-flex justify-content-between">
                         <h5 class="mb-0">My Profile</h5>
                         <a href="" class="btn btn-primary btn-sm">Edit Profile</a>
                     </div>
-                </div> 
+                </div>  --}}
+
                 <hr class="hr">
                 <div class="card-body">
                     @if (session('status'))
