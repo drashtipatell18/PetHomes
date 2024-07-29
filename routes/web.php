@@ -61,6 +61,7 @@ Route::post('/user/insert',[UserController::class,'userInsert'])->name('insert.u
 Route::get('/user/edit/{id}', [UserController::class, 'userEdit'])->name('edit.user');
 Route::post('/user/update/{id}', [UserController::class, 'userUpdate'])->name('update.user');
 Route::get('/user/destroy/{id}',[UserController::class,'userDestroy'])->name('destroy.user');
+Route::get('/user/profile',[UserController::class,'myProfile'])->name('profile.user');
 
 // Category
 

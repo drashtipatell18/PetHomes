@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -87,5 +88,14 @@ class UserController extends Controller
         $user->delete();
         session()->flash('danger', 'User Delete successfully!');
         return redirect()->route('user');
+    }
+
+    public function myProfile()
+    {
+        if (Auth::check()) {
+            $userid = Auth::user()->id;
+            $users = User::find($userid);
+        }
+        return view('user.user_profile', compact('users'));
     }
 }
