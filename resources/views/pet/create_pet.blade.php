@@ -131,7 +131,7 @@
                         @enderror
                     </div>
                     <div class="item form-group">
-                        <button type="submit" class="btn btn-lg btn-info btn-block">
+                        <button type="submit" class="btn btn-lg btn-block" style="background-color: #976239; color:aliceblue">
                             @if (isset($pets))
                                 Update
                             @else
