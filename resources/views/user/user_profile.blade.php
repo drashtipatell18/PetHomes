@@ -1,7 +1,6 @@
 @extends('layouts.main')
-
 @section('content')
-<style>
+    <style>
         .header-container {
             display: flex;
             justify-content: space-between;
@@ -12,7 +11,8 @@
             color: #976239;
             font-size: 25px;
         }
-     .btn-primary {
+
+        .btn-primary {
             margin-left: auto;
         }
 
@@ -25,83 +25,144 @@
             border-radius: 4px;
             cursor: pointer;
             transition: all .3s ease-out;
-            /* text-transform: uppercase; */
         }
+
         .button:hover {
             background-color: #976239;
             color: #fff;
         }
-</style>
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-12 col-sm-12">
-            <div class="card">
-                <div class="header-container d-flex justify-content-between align-items-center">
-                    <div class="card-header py-3" style="color: #976239; font-size: 25px;">
-                        My Profile
+
+        .modal {
+            display: block !important;
+            opacity: 1 !important;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 9999 !important;
+        }
+
+        .modal-dialog {
+            z-index: 10000 !important;
+        }
+    </style>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-sm-12">
+                <div class="card">
+                    <div class="header-container d-flex justify-content-between align-items-center">
+                        <div class="card-header py-3" style="color: #976239; font-size: 25px;">
+                            My Profile
+                        </div>
+                        <button type="button" class="btn btn-sm mt-1 button" data-bs-toggle="modal"
+                            data-bs-target="#editProfileModal">
+                            <i class="bi bi-plus-lg mr-5" style="margin-right: 5px"></i> Edit Profile
+                        </button>
                     </div>
-                    <a href="{{ route('create.user') }}" class="btn btn-sm mt-1 button">
-                        <i class="bi bi-plus-lg mr-5" style="margin-right: 5px"></i> Edit Profile
-                    </a>
+
+                    <hr class="hr">
+                    <div class="card-body">
+                        @if (session('status'))
+                            <div class="alert alert-success" role="alert">
+                                {{ session('status') }}
+                            </div>
+                        @endif
+
+                        <div class="row mb-4">
+                            <div class="col-md-4 text-center">
+                                @if (Auth::user()->image)
+                                    <img src="/images/{{ Auth::user()->image }}" alt="Profile Photo"
+                                        class="img-fluid rounded-circle" style="max-width: 200px;">
+                                @else
+                                    <img src="/images/default-avatar.png" alt="Default Avatar"
+                                        class="img-fluid rounded-circle" style="max-width: 200px;">
+                                @endif
+                            </div>
+                            <div class="col-md-8">
+                                <div class="row mb-3">
+                                    <label class="col-md-4 col-form-label text-md-right">User ID</label>
+                                    <div class="col-md-8">
+                                        <p class="form-control-static">{{ $users->id }}</p>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <label class="col-md-4 col-form-label text-md-right">Name</label>
+                                    <div class="col-md-8">
+                                        <p class="form-control-static">{{ $users->name }}</p>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <label class="col-md-4 col-form-label text-md-right">Email Address</label>
+                                    <div class="col-md-8">
+                                        <p class="form-control-static">{{ $users->email }}</p>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <label class="col-md-4 col-form-label text-md-right">Phone</label>
+                                    <div class="col-md-8">
+                                        <p class="form-control-static">{{ $users->phone ?? 'Not provided' }}</p>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <label class="col-md-4 col-form-label text-md-right">Address</label>
+                                    <div class="col-md-8">
+                                        <p class="form-control-static">{{ $users->address ?? 'Not provided' }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                {{-- <div class="card-header py-3">
-                    <div class="d-flex justify-content-between">
-                        <h5 class="mb-0">My Profile</h5>
-                        <a href="" class="btn btn-primary btn-sm">Edit Profile</a>
-                    </div>
-                </div>  --}}
-
-                <hr class="hr">
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    <div class="row mb-4">
-                        <div class="col-md-4 text-center">
-                            @if(Auth::user()->image)
-                                <img src="/images/{{Auth::user()->image}}" alt="Profile Photo" class="img-fluid rounded-circle" style="max-width: 200px;">
-                            @else
-                                <img src="/images/default-avatar.png" alt="Default Avatar" class="img-fluid rounded-circle" style="max-width: 200px;">
-                            @endif
-                        </div>
-                        <div class="col-md-8">
-                            <div class="row mb-3">
-                                <label class="col-md-4 col-form-label text-md-right">User ID</label>
-                                <div class="col-md-8">
-                                    <p class="form-control-static">{{ $users->id }}</p>
-                                </div>
+                <!-- Edit Profile Modal -->
+                <div class="modal fade" id="editProfileModal" tabindex="-1" aria-labelledby="editProfileModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="editProfileModalLabel">Edit Profile</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
                             </div>
+                            <div class="modal-body">
+                                <!-- Add your edit profile form here -->
+                                <form id="editProfileForm" method="POST" action="{{ route('update.profile', Auth::id()) }}"
+                                    enctype="multipart/form-data">
+                                    @csrf
+                                    @method('PUT')
 
-                            <div class="row mb-3">
-                                <label class="col-md-4 col-form-label text-md-right">Name</label>
-                                <div class="col-md-8">
-                                    <p class="form-control-static">{{ $users->name }}</p>
-                                </div>
-                            </div>
+                                    <!-- Add form fields for editing profile -->
+                                    <div class="mb-3">
+                                        <label for="name" class="form-label">Name</label>
+                                        <input type="text" class="form-control" id="name" name="name"
+                                            value="{{ $users->name }}">
+                                    </div>
 
-                            <div class="row mb-3">
-                                <label class="col-md-4 col-form-label text-md-right">Email Address</label>
-                                <div class="col-md-8">
-                                    <p class="form-control-static">{{ $users->email }}</p>
-                                </div>
-                            </div>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email address</label>
+                                        <input type="email" class="form-control" id="email" name="email"
+                                            value="{{ $users->email }}">
+                                    </div>
 
-                            <div class="row mb-3">
-                                <label class="col-md-4 col-form-label text-md-right">Phone</label>
-                                <div class="col-md-8">
-                                    <p class="form-control-static">{{ $users->phone ?? 'Not provided' }}</p>
-                                </div>
-                            </div>
+                                    <div class="mb-3">
+                                        <label for="phone" class="form-label">Phone</label>
+                                        <input type="text" class="form-control" id="phone" name="phone"
+                                            value="{{ $users->phone }}">
+                                    </div>
 
-                            <div class="row mb-3">
-                                <label class="col-md-4 col-form-label text-md-right">Address</label>
-                                <div class="col-md-8">
-                                    <p class="form-control-static">{{ $users->address ?? 'Not provided' }}</p>
-                                </div>
+                                    <div class="mb-3">
+                                        <label for="address" class="form-label">Address</label>
+                                        <textarea class="form-control" id="address" name="address" rows="3">{{ $users->address }}</textarea>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="image" class="form-label">Profile Picture</label>
+                                        <input type="file" class="form-control" id="image" name="image">
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -109,5 +170,15 @@
             </div>
         </div>
     </div>
-</div>
 @endsection
+@push('scripts')
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            @if ($errors->any())
+                var myModal = new bootstrap.Modal($('#editProfileModal')[0]);
+                myModal.show();
+            @endif
+        });
+    </script>
+@endpush

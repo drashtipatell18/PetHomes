@@ -98,4 +98,32 @@ class UserController extends Controller
         }
         return view('user.user_profile', compact('users'));
     }
+    public function updateProfile(Request $request, $id)
+    {
+        $user = User::findOrFail($id);
+    
+        // Check if the authenticated user is allowed to update this profile
+        if (Auth::id() !== $user->id) {
+            return redirect()->back()->with('error', 'You are not authorized to update this profile.');
+        }
+    
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users,email,' . $user->id,
+            'phone' => 'nullable|string|max:20',
+            'address' => 'nullable|string|max:255',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+        ]);
+    
+        $user->update($validated);
+    
+        if ($request->hasFile('image')) {
+            $imageName = time() . '.' . $request->image->extension();
+            $request->image->move(public_path('images'), $imageName);
+            $user->image = $imageName;
+            $user->save();
+        }
+    
+        return redirect()->route('profile.user')->with('status', 'Profile updated successfully!');
+    }
 }

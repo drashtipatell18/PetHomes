@@ -25,7 +25,6 @@
     <link rel="shortcut icon" href="{{ asset('asset/img/logomi.png') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
         integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
-
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css">
 </head>
 <style>
@@ -341,7 +340,6 @@
         <span class="fa fa-bars"></span>
     </button>
     <!-- end: Mobile -->
-
     <!-- start: Javascript -->
     <script src="{{ asset('asset/js/jquery.min.js') }}"></script>
     <script src="https://cdn.datatables.net/2.1.2/js/dataTables.js"></script>

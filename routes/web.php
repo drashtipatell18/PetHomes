@@ -62,8 +62,7 @@ Route::get('/user/edit/{id}', [UserController::class, 'userEdit'])->name('edit.u
 Route::post('/user/update/{id}', [UserController::class, 'userUpdate'])->name('update.user');
 Route::get('/user/destroy/{id}',[UserController::class,'userDestroy'])->name('destroy.user');
 Route::get('/user/profile',[UserController::class,'myProfile'])->name('profile.user');
-
-// Category
+Route::put('/update-profile/{id}', [UserController::class, 'updateProfile'])->name('update.profile');// Category
 
 Route::get('/category', [CategoryController::class, 'category'])->name('category');
 Route::get('/category/create', [CategoryController::class, 'createCategory'])->name('category.create');
