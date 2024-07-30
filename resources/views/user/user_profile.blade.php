@@ -33,14 +33,18 @@
         }
 
         .modal {
-            display: block !important;
+            /* display: block !important; */
             opacity: 1 !important;
             background-color: rgba(0, 0, 0, 0.5);
             z-index: 9999 !important;
+            margin-top: 50px;
         }
 
         .modal-dialog {
             z-index: 10000 !important;
+        }
+        .top-comtantet{
+            margin-top:185px;
         }
     </style>
     <div class="container">
@@ -119,7 +123,7 @@
                 <div class="modal fade" id="editProfileModal" tabindex="-1" aria-labelledby="editProfileModalLabel"
                     aria-hidden="true">
                     <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
+                        <div class="modal-content top-comtantet">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="editProfileModalLabel">Edit Profile</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
@@ -171,12 +175,14 @@
         </div>
     </div>
 @endsection
+
 @push('scripts')
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        $(document).ready(function() {
+        document.addEventListener('DOMContentLoaded', function() {
+            // Show modal based on session errors or other conditions
             @if ($errors->any())
-                var myModal = new bootstrap.Modal($('#editProfileModal')[0]);
+                var myModal = new bootstrap.Modal(document.getElementById('editProfileModal'));
                 myModal.show();
             @endif
         });
