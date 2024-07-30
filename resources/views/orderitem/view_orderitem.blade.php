@@ -88,10 +88,10 @@
                                     <td class="text-center">{{ $orderitem->price }}</td>
                                     <td class="text-center">
                                         <a href="{{ route('edit.orderitem', $orderitem->id) }}"
-                                            class="btn btn-primary btn-sm"><i class="bi bi-pencil-square"></i></a>
+                                            class="button btn-sm"><i class="bi bi-pencil-square"></i></a>
 
                                         <a href="{{ route('destroy.orderitem', $orderitem->id) }}"
-                                            class="btn btn-danger btn-sm"onclick="return confirm('Are you sure you want to delete this ?');"><i
+                                            class="button btn-sm"onclick="return confirm('Are you sure you want to delete this ?');"><i
                                                 class="bi bi-trash3-fill"></i></a>
                                     </td>
                                 </tr>
