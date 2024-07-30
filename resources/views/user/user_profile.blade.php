@@ -43,8 +43,16 @@
         .modal-dialog {
             z-index: 10000 !important;
         }
-        .top-comtantet{
-            margin-top:185px;
+
+        .top-comtantet {
+            margin-top: 185px;
+        }
+
+        .modal-header .btn-close {
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+            z-index: 1;
         }
     </style>
     <div class="container">
@@ -127,7 +135,9 @@
                             <div class="modal-header">
                                 <h5 class="modal-title" id="editProfileModalLabel">Edit Profile</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
+                                    aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                </button>
                             </div>
                             <div class="modal-body">
                                 <!-- Add your edit profile form here -->
@@ -159,13 +169,32 @@
                                         <label for="address" class="form-label">Address</label>
                                         <textarea class="form-control" id="address" name="address" rows="3">{{ $users->address }}</textarea>
                                     </div>
-
-                                    <div class="mb-3">
-                                        <label for="image" class="form-label">Profile Picture</label>
-                                        <input type="file" class="form-control" id="image" name="image">
+                                    <div>
+                                      &nbsp;  
                                     </div>
-
-                                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                                    <div class="mb-3">
+                                        @if (isset($users) && $users->image)
+                                            <label for="image" id="imageLabel" class="control-label mb-1 oldimage">Old Image</label>
+                                            <img id="oldImage" src="{{ asset('images/' . $users->image) }}" alt="Uploaded Document"
+                                                width="100">
+                                            <input type="hidden" class="form-control" name="oldimage" value="{{ $users->image }}">
+                                        @endif
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="image" class="control-label mb-1">Image</label>
+                                        <input type="file" id="profilepicInput" class="form-control" name="image">
+                                        @error('image')
+                                            <span class="invalid-feedback" style="color: red">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+                                    <div>
+                                        &nbsp;  
+                                      </div>
+                                    <div class="text-center">
+                                        <button type="submit" class="btn btn-sm" style="background-color: #976239; color:aliceblue">Save Changes</button>
+                                    </div>
                                 </form>
                             </div>
                         </div>
@@ -185,6 +214,21 @@
                 var myModal = new bootstrap.Modal(document.getElementById('editProfileModal'));
                 myModal.show();
             @endif
+        });
+        $(document).ready(function() {
+            $('#profilepicInput').change(function(e) {
+                var fileName = e.target.files[0];
+                if (fileName) {
+                    $('#imageLabel').text('New Image'); // Change the label text
+
+                    // Display the new image in the img tag
+                    var reader = new FileReader();
+                    reader.onload = function(e) {
+                        $('#oldImage').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(fileName);
+                }
+            });
         });
     </script>
 @endpush
