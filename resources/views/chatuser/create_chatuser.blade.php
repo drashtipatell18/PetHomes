@@ -27,7 +27,7 @@
                     <h3 class="text-center title-2">{{ isset($chatusers) ? 'Edit Chat User' : 'Add Chat User' }}</h3>
                 </div>
                 <hr>
-                <form action="{{ isset($chatusers) ? '/chatuser/update/' . $chatusers->id : '/chatuser/store' }}" method="POST"
+                <form action="{{ isset($chatusers) ? '/admin/chatuser/update/' . $chatusers->id : '/chatuser/store' }}" method="POST"
                     enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">

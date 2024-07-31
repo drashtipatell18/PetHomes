@@ -27,7 +27,7 @@
                     <h3 class="text-center title-2">{{ isset($pets) ? 'Edit Pet' : 'Add Pet' }}</h3>
                 </div>
                 <hr>
-                <form action="{{ isset($pets) ? '/pet/update/' . $pets->id : '/pet/store' }}" method="POST"
+                <form action="{{ isset($pets) ? '/admin/pet/update/' . $pets->id : '/pet/store' }}" method="POST"
                     enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">

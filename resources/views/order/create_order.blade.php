@@ -27,7 +27,7 @@
                     <h3 class="text-center title-2">{{ isset($orders) ? 'Edit Order' : 'Add Order' }}</h3>
                 </div>
                 <hr>
-                <form action="{{ isset($orders) ? '/order/update/' . $orders->id : '/order/store' }}" method="POST"
+                <form action="{{ isset($orders) ? '/admin/order/update/' . $orders->id : '/order/store' }}" method="POST"
                     enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
@@ -71,7 +71,7 @@
                             </span>
                         @enderror
                     </div>
-                   
+
                     <div class="item form-group">
                         <button type="submit" class="btn btn-lg btn-block" style="background-color: #976239; color:aliceblue">
                             @if (isset($orders))

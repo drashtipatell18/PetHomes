@@ -88,6 +88,6 @@ class HomeController extends Controller
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect('/login');
+        return redirect()->route('login');
     }
 }

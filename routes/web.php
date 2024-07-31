@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserHomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
@@ -28,28 +29,30 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Route::get('/', function () {
-    if(Auth::user())
+    if(Auth::user() && Auth::user()->role == 'admin')
     {
         return redirect()->route('dashboard');
     }
-    return redirect()->route('login');
+    return redirect()->route('user.dashboard');
 });
 
 // Route::get('/', function () {
 //     return view('layouts.main');
 // });
 
-Route::get('/login',[HomeController::class,'Login'])->name('login');
-Route::post('/loginstore',[HomeController::class,'LoginStore'])->name('loginstore');
-Route::get('/logout',[HomeController::class,'Logout'])->name('logout');
-Route::get('/forget-password', [DashboardController::class, 'showForgetPasswordForm'])->name('forget.password');
-Route::post('/forget-password', [DashboardController::class, 'sendResetLinkEmail'])->name('forget.password.email');
-Route::get('/reset/{token}', [DashboardController::class, 'reset'])->name('reset');
-Route::post('/reset/{token}', [DashboardController::class, 'postReset'])->name('post_reset');
-Route::get('/cpassword',[HomeController::class,'cPassword'])->name('changepass');
-Route::post('/changepassword',[HomeController::class,'changePassword'])->name('changePassword');
 
-// Route::middleware(['auth'])->group(function () {
+// Admin Side Routes
+Route::get('/admin/login',[HomeController::class,'Login'])->name('login');
+Route::post('/admin/loginstore',[HomeController::class,'LoginStore'])->name('loginstore');
+Route::get('/admin/logout',[HomeController::class,'Logout'])->name('logout');
+Route::get('/admin/forget-password', [DashboardController::class, 'showForgetPasswordForm'])->name('forget.password');
+Route::post('/admin/forget-password', [DashboardController::class, 'sendResetLinkEmail'])->name('forget.password.email');
+Route::get('/admin/reset/{token}', [DashboardController::class, 'reset'])->name('reset');
+Route::post('/admin/reset/{token}', [DashboardController::class, 'postReset'])->name('post_reset');
+Route::get('/admin/cpassword',[HomeController::class,'cPassword'])->name('changepass');
+Route::post('/admin/changepassword',[HomeController::class,'changePassword'])->name('changePassword');
+
+Route::middleware(['auth'])->prefix('admin')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
 
 
@@ -116,7 +119,7 @@ Route::get('/order/edit/{id}', [OrderController::class, 'OrderEdit'])->name('edi
 Route::post('/order/update/{id}', [OrderController::class, 'OrderUpdate'])->name('update.order');
 Route::get('/order/destroy/{id}',[OrderController::class,'OrderDestroy'])->name('destroy.order');
 
-//OrderItem 
+//OrderItem
 
 Route::get('/orderitem', [OrderItemController::class, 'orderitem'])->name('orderitem');
 Route::get('/orderitem/create', [OrderItemController::class, 'createOrderItem'])->name('orderitem.create');
@@ -151,4 +154,8 @@ Route::post('/chat/store', [ChatController::class, 'storeChat'])->name('chat.sto
 Route::get('/chat/edit/{id}', [ChatController::class, 'ChatEdit'])->name('edit.chat');
 Route::post('/chat/update/{id}', [ChatController::class, 'ChatUpdate'])->name('update.chat');
 Route::get('/chat/destroy/{id}',[ChatController::class,'ChatDestroy'])->name('destroy.chat');
-// });
+});
+
+
+// User Side routes
+Route::get('/home', [UserHomeController::class,'dashboard'])->name('user.dashboard');

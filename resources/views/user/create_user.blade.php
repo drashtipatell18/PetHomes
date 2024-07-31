@@ -27,7 +27,7 @@
                     <h3 class="text-center title-2" style="color:#976239">{{ isset($users) ? 'Edit User' : 'Add User' }}</h3>
                 </div>
                 <hr>
-                <form action="{{ isset($users) ? '/user/update/' . $users->id : '/user/insert' }}" method="POST"
+                <form action="{{ isset($users) ? '/admin/user/update/' . $users->id : '/user/insert' }}" method="POST"
                     enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">

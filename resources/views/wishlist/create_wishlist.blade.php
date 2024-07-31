@@ -27,7 +27,7 @@
                     <h3 class="text-center title-2">{{ isset($wishlists) ? 'Edit Wish List' : 'Add Wish List' }}</h3>
                 </div>
                 <hr>
-                <form action="{{ isset($wishlists) ? '/wishlist/update/' . $wishlists->id : '/wishlist/store' }}" method="POST"
+                <form action="{{ isset($wishlists) ? '/admin/wishlist/update/' . $wishlists->id : '/wishlist/store' }}" method="POST"
                     enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
@@ -63,7 +63,7 @@
                             </span>
                         @enderror
                     </div>
-                     
+
                     <div class="item form-group">
                         <button type="submit" class="btn btn-lg btn-block" style="background-color: #976239; color:aliceblue">
                             @if (isset($wishlists))

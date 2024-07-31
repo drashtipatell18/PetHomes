@@ -27,7 +27,7 @@
                     <h3 class="text-center title-2">{{ isset($services) ? 'Edit Service' : 'Add Service' }}</h3>
                 </div>
                 <hr>
-                <form action="{{ isset($services) ? '/service/update/' . $services->id : '/service/store' }}" method="POST"
+                <form action="{{ isset($services) ? '/admin/service/update/' . $services->id : '/service/store' }}" method="POST"
                     enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
@@ -40,7 +40,7 @@
                             </span>
                         @enderror
                     </div>
-                   
+
                     <div class="form-group">
                         <label for="price" class="control-label mb-1">Price</label>
                         <input id="price" name="price" type="number" value="{{ old('price', $services->price ?? '') }}"

@@ -27,7 +27,7 @@
                     <h3 class="text-center title-2">{{ isset($appointments) ? 'Edit Appointment' : 'Add Appointment' }}</h3>
                 </div>
                 <hr>
-                <form action="{{ isset($appointments) ? '/appointment/update/' . $appointments->id : '/appointment/store' }}"
+                <form action="{{ isset($appointments) ? '/admin/appointment/update/' . $appointments->id : '/appointment/store' }}"
                     method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">

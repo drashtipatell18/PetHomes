@@ -27,7 +27,7 @@
                     <h3 class="text-center title-2">{{ isset($products) ? 'Edit Product' : 'Add Product' }}</h3>
                 </div>
                 <hr>
-                <form action="{{ isset($products) ? '/product/update/' . $products->id : '/product/store' }}"
+                <form action="{{ isset($products) ? '/admin/product/update/' . $products->id : '/product/store' }}"
                     method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
@@ -59,7 +59,7 @@
                             </span>
                         @enderror
                     </div>
-                  
+
                     <div class="form-group">
                         <label for="stock" class="control-label mb-1">Stock</label>
                         <input id="stock" name="stock" type="text" value="{{ old('stock', $products->stock ?? '') }}"

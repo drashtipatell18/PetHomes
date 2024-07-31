@@ -27,7 +27,7 @@
                         <h3 class="text-center title-2">{{ isset($category) ? 'Edit Category' : 'Add Category' }}</h3>
                     </div>
                     <hr>
-                    <form action="{{ isset($category) ? '/category/update/' . $category->id : '/category/store' }}"
+                    <form action="{{ isset($category) ? '/category/update/' . $category->id : '/admin/category/store' }}"
                         method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">

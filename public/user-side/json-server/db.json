@@ -1,0 +1,2010 @@
+{
+  "pet": [
+    {
+      "id": "1",
+      "name": "Max",
+      "type": "dog",
+      "breed": "Golden Retriever",
+      "age": "3years",
+      "advert_type": "For Sale",
+      "description": "Max is a loving and affectionate dog with a long, dense coat. He loves to run and play fetch.",
+      "price": 500,
+      "location": "New York, NY",
+      "vaccinated": true,
+      "neutered": false,
+      "images": [
+        "img/dog1.png",
+        "img/dog1.png",
+        "img/dog1.png",
+        "img/dog1.png",
+        "img/dog1.png",
+        "img/dog1.png"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Buddy",
+      "type": "dog",
+      "breed": "Labrador Retriever",
+      "age": "2years",
+      "advert_type": "For Sale",
+      "description": "Buddy is a friendly and outgoing dog with a short, smooth coat. He loves to play fetch and go on walks.",
+      "price": 400,
+      "location": "Chicago, IL",
+      "vaccinated": true,
+      "neutered": true,
+      "images": [
+        "img/pet1.png",
+        "img/pet2.png",
+        "img/pet3.png",
+        "img/pet4.png",
+        "img/pet5.png",
+        "img/pet6.png"
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Rocky",
+      "type": "dog",
+      "breed": "Boxer",
+      "age": "1years 0months",
+      "advert_type": "For adoption",
+      "description": "Rocky is a playful and energetic dog with a short, smooth coat. He loves to run and play with toys.",
+      "price": 300,
+      "location": "San Francisco, CA",
+      "vaccinated": true,
+      "neutered": false,
+      "images": [
+        "img/dog3.png",
+        "img/dog3.png",
+        "img/dog3.png",
+        "img/dog3.png",
+        "img/dog3.png",
+        "img/dog3.png"
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Daisy",
+      "type": "dog",
+      "breed": "Poodle",
+      "age": "4years",
+      "advert_type": "For adoption",
+      "description": "Daisy is a gentle and intelligent dog with a curly, non-shedding coat. She loves to play with toys and go on walks.",
+      "price": 600,
+      "location": "Miami, FL",
+      "vaccinated": true,
+      "neutered": true,
+      "images": [
+        "img/dog4.png",
+        "img/dog4.png",
+        "img/dog4.png",
+        "img/dog4.png",
+        "img/dog4.png",
+        "img/dog4.png"
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Charlie",
+      "type": "dog",
+      "breed": "Beagle",
+      "age": "2years",
+      "advert_type": "For stud",
+      "description": "Charlie is a friendly and curious dog with a short, smooth coat. He loves to explore and play with toys.",
+      "price": 350,
+      "location": "Boston, MA",
+      "vaccinated": true,
+      "neutered": false,
+      "images": [
+        "img/dog5.png",
+        "img/dog5.png",
+        "img/dog5.png",
+        "img/dog5.png",
+        "img/dog5.png",
+        "img/dog5.png"
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Lucy",
+      "type": "dog",
+      "breed": "Cocker Spaniel",
+      "age": "3years",
+      "advert_type": "For wanted",
+      "description": "Lucy is a gentle and affectionate dog with a long, curly coat. She loves to play with toys and go on walks.",
+      "price": 450,
+      "location": "Denver, CO",
+      "vaccinated": true,
+      "neutered": true,
+      "images": [
+        "img/dog6.png",
+        "img/dog6.png",
+        "img/dog6.png",
+        "img/dog6.png",
+        "img/dog6.png",
+        "img/dog6.png"
+      ]
+    },
+    {
+      "id": "7",
+      "name": "Bella",
+      "type": "dog",
+      "breed": "Chihuahua",
+      "age": "1years 0months",
+      "advert_type": "For Sale",
+      "description": "Bella is a lively and alert dog with a short, smooth coat. She loves to play with toys and cuddle with her owner.",
+      "price": 200,
+      "location": "Seattle, WA",
+      "vaccinated": true,
+      "neutered": false,
+      "images": [
+        "img/dog7.png",
+        "img/dog7.png",
+        "img/dog7.png",
+        "img/dog7.png",
+        "img/dog7.png",
+        "img/dog7.png"
+      ]
+    },
+    {
+      "id": "8",
+      "name": "Duke",
+      "type": "dog",
+      "breed": "Rottweiler",
+      "age": "4years",
+      "advert_type": "For Sale",
+      "description": "Duke is a confident and loyal dog with a short, black and tan coat. He loves to play and go on walks.",
+      "price": 700,
+      "location": "Houston, TX",
+      "vaccinated": true,
+      "neutered": true,
+      "images": [
+        "img/dog8.png",
+        "img/dog8.png",
+        "img/dog8.png",
+        "img/dog8.png",
+        "img/dog8.png",
+        "img/dog8.png"
+      ]
+    },
+    {
+      "id": "9",
+      "name": "Molly",
+      "type": "dog",
+      "breed": "Shih Tzu",
+      "age": "2years",
+      "advert_type": "For Sale",
+      "description": "Molly is a friendly and outgoing dog with a long, silky coat. She loves to play with toys and cuddle with her owner.",
+      "price": 550,
+      "location": "Philadelphia, PA",
+      "vaccinated": true,
+      "neutered": false,
+      "images": [
+        "img/dog9.png",
+        "img/dog9.png",
+        "img/dog9.png",
+        "img/dog9.png",
+        "img/dog9.png",
+        "img/dog9.png"
+      ]
+    },
+    {
+      "id": "10",
+      "name": "Tucker",
+      "type": "dog",
+      "breed": "Bulldog",
+      "age": "3years",
+      "advert_type": "For Sale",
+      "description": "Tucker is a friendly and affectionate dog with a short, wrinkled coat. He loves to play with toys and go on walks.",
+      "price": 650,
+      "location": "Atlanta, GA",
+      "vaccinated": true,
+      "neutered": true,
+      "images": [
+        "img/dog10.png",
+        "img/dog10.png",
+        "img/dog10.png",
+        "img/dog10.png",
+        "img/dog10.png",
+        "img/dog10.png"
+      ]
+    },
+    {
+      "id": "11",
+      "name": "Whiskers",
+      "type": "cat",
+      "breed": "Domestic Shorthair",
+      "age": "1years 2months",
+      "advert_type": "For Stud",
+      "description": "Whiskers is a friendly and playful cat with a short, soft coat. She enjoys lounging in the sun and playing with toys.",
+      "price": 0,
+      "location": "New York, NY",
+      "vaccinated": true,
+      "neutered": true,
+      "images": [
+        "img/hc5.png",
+        "img/hc5.png",
+        "img/hc5.png",
+        "img/hc5.png",
+        "img/hc5.png",
+        "img/hc5.png"
+      ]
+    },
+    {
+      "id": "12",
+      "name": "Snowflake",
+      "type": "cat",
+      "breed": "Persian",
+      "age": "2years",
+      "advert_type": "For Adoption",
+      "description": "Snowflake is a gentle and calm cat with a long, fluffy coat. She loves to cuddle and sleep.",
+      "price": 0,
+      "location": "Los Angeles, CA",
+      "vaccinated": true,
+      "neutered": true,
+      "images": [
+        "img/hc2.png",
+        "img/hc2.png",
+        "img/hc2.png",
+        "img/hc2.png",
+        "img/hc2.png",
+        "img/hc2.png"
+      ]
+    },
+    {
+      "id": "13",
+      "name": "Mittens",
+      "type": "cat",
+      "breed": "Siamese",
+      "age": "3years",
+      "advert_type": "For Sale",
+      "description": "Mittens is a playful and curious cat with a short, sleek coat. She loves to chase toys and climb.",
+      "price": 300,
+      "location": "Chicago, IL",
+      "vaccinated": true,
+      "neutered": false,
+      "images": [
+        "img/hc3.png",
+        "img/hc3.png",
+        "img/hc3.png",
+        "img/hc3.png",
+        "img/hc3.png",
+        "img/hc3.png"
+      ]
+    },
+    {
+      "id": "14",
+      "name": "Luna",
+      "type": "cat",
+      "breed": "Maine Coon",
+      "age": "2years",
+      "advert_type": "For Adoption",
+      "description": "Luna is a friendly and outgoing cat with a long, fluffy coat. She loves to play and cuddle.",
+      "price": 0,
+      "location": "San Francisco, CA",
+      "vaccinated": true,
+      "neutered": true,
+      "images": [
+        "img/hc4.png",
+        "img/hc4.png",
+        "img/hc4.png",
+        "img/hc4.png",
+        "img/hc4.png",
+        "img/hc4.png"
+      ]
+    },
+    {
+      "id": "15",
+      "name": "Ginger",
+      "type": "cat",
+      "breed": "Tabby",
+      "age": "1years 2months",
+      "advert_type": "For Stud",
+      "description": "Ginger is a playful and energetic cat with a short, orange coat. She loves to chase toys and climb.",
+      "price": 250,
+      "location": "Miami, FL",
+      "vaccinated": true,
+      "neutered": false,
+      "images": [
+        "img/hc1.png",
+        "img/hc1.png",
+        "img/hc1.png",
+        "img/hc1.png",
+        "img/hc1.png",
+        "img/hc1.png"
+      ]
+    },
+    {
+      "id": "16",
+      "name": "Simba",
+      "type": "cat",
+      "breed": "Bengal",
+      "age": "3years",
+      "advert_type": "For Sale",
+      "description": "Simba is a confident and playful cat with a short, spotted coat. He loves to play and climb.",
+      "price": 400,
+      "location": "Boston, MA",
+      "vaccinated": true,
+      "neutered": true,
+      "images": [
+        "img/cat1.png",
+        "img/cat1.png",
+        "img/cat1.png",
+        "img/cat1.png",
+        "img/cat1.png",
+        "img/cat1.png"
+      ]
+    },
+    {
+      "id": "17",
+      "name": "Cleo",
+      "type": "cat",
+      "breed": "Egyptian Mau",
+      "age": "2years",
+      "advert_type": "For Adoption",
+      "description": "Cleo is a gentle and affectionate cat with a short, silver coat. She loves to cuddle and sleep.",
+      "price": 0,
+      "location": "Denver, CO",
+      "vaccinated": true,
+      "neutered": true,
+      "images": [
+        "img/cat2.png",
+        "img/cat2.png",
+        "img/cat2.png",
+        "img/cat2.png",
+        "img/cat2.png",
+        "img/cat2.png"
+      ]
+    },
+    {
+      "id": "18",
+      "name": "Felix",
+      "type": "cat",
+      "breed": "Oriental Shorthair",
+      "age": "1 year",
+      "advert_type": "For Sale",
+      "description": "Felix is a playful and curious cat with a short, sleek coat. He loves to chase toys and climb.",
+      "price": 200,
+      "location": "Seattle, WA",
+      "vaccinated": true,
+      "neutered": false,
+      "images": [
+        "img/cat3.png",
+        "img/cat3.png",
+        "img/cat3.png",
+        "img/cat3.png",
+        "img/cat3.png",
+        "img/cat3.png"
+      ]
+    },
+    {
+      "id": "19",
+      "name": "Lola",
+      "type": "cat",
+      "breed": "Ragdoll",
+      "age": "2years",
+      "advert_type": "For Adoption",
+      "description": "Lola is a gentle and laid-back cat with a long, soft coat. She loves to cuddle and sleep.",
+      "price": 0,
+      "location": "Dallas, TX",
+      "vaccinated": true,
+      "neutered": true,
+      "images": [
+        "img/hc2.png",
+        "img/hc2.png",
+        "img/hc2.png",
+        "img/hc2.png",
+        "img/hc2.png",
+        "img/hc2.png"
+      ]
+    },
+    {
+      "id": "20",
+      "name": "Misty",
+      "type": "cat",
+      "breed": "British Shorthair",
+      "age": "3years",
+      "advert_type": "For Sale",
+      "description": "Misty is a calm and gentle cat with a short, blue-gray coat. She loves to lounge in the sun and play with toys.",
+      "price": 350,
+      "location": "Philadelphia, PA",
+      "vaccinated": true,
+      "neutered": true,
+      "images": [
+        "img/hc5.png",
+        "img/hc5.png",
+        "img/hc5.png",
+        "img/hc5.png",
+        "img/hc5.png",
+        "img/hc5.png"
+      ]
+    },
+    {
+      "id": "21",
+      "name": "Flopsy",
+      "type": "rabbit",
+      "breed": "Dwarf Hotot",
+      "age": "12months",
+      "advert_type": "For Adoption",
+      "description": "Flopsy is a friendly and curious rabbit with a shiny black coat. She loves to hop and play.",
+      "price": 0,
+      "location": "New York, NY",
+      "vaccinated": true,
+      "neutered": true,
+      "images": [
+        "img/rabbit1.png",
+        "img/rabbit1.png",
+        "img/rabbit1.png",
+        "img/rabbit1.png",
+        "img/rabbit1.png",
+        "img/rabbit1.png"
+      ]
+    },
+    {
+      "id": "22",
+      "name": "Benny",
+      "type": "rabbit",
+      "breed": "Netherland Dwarf",
+      "age": "2years",
+      "advert_type": "For Sale",
+      "description": "Benny is a playful and energetic rabbit with a white and orange coat. He loves to jump and explore.",
+      "price": 150,
+      "location": "Los Angeles, CA",
+      "vaccinated": true,
+      "neutered": false,
+      "images": [
+        "img/rabbit2.png",
+        "img/rabbit2.png",
+        "img/rabbit2.png",
+        "img/rabbit2.png",
+        "img/rabbit2.png",
+        "img/rabbit2.png"
+      ]
+    },
+    {
+      "id": "23",
+      "name": "Cottonball",
+      "type": "rabbit",
+      "breed": "Lionhead",
+      "age": "12months",
+      "advert_type": "For Adoption",
+      "description": "Cottonball is a gentle and affectionate rabbit with a soft, fluffy coat. She loves to cuddle and sleep.",
+      "price": 0,
+      "location": "Chicago, IL",
+      "vaccinated": true,
+      "neutered": true,
+      "images": [
+        "img/rabbit3.jpeg",
+        "img/rabbit3.jpeg",
+        "img/rabbit3.jpeg",
+        "img/rabbit3.jpeg",
+        "img/rabbit3.jpeg",
+        "img/rabbit3.jpeg"
+      ]
+    },
+    {
+      "id": "24",
+      "name": "Remy",
+      "type": "rabbit",
+      "breed": "French Lop",
+      "age": "2years",
+      "advert_type": "Wanted",
+      "description": "Remy is a curious and playful rabbit with a short, easy-to-maintain coat. He loves to explore and play with toys.",
+      "price": 200,
+      "location": "San Francisco, CA",
+      "vaccinated": true,
+      "neutered": false,
+      "images": [
+        "img/rabbit4.jpeg",
+        "img/rabbit4.jpeg",
+        "img/rabbit4.jpeg",
+        "img/rabbit4.jpeg",
+        "img/rabbit4.jpeg",
+        "img/rabbit4.jpeg"
+      ]
+    },
+    {
+      "id": "25",
+      "name": "Luna",
+      "type": "rabbit",
+      "breed": "English Angora",
+      "age": "12months",
+      "advert_type": "For Adoption",
+      "description": "Luna is a gentle and laid-back rabbit with a long, soft coat. She loves to lounge in the sun and snuggle.",
+      "price": 0,
+      "location": "Miami, FL",
+      "vaccinated": true,
+      "neutered": true,
+      "images": [
+        "img/rabbit5.jpg",
+        "img/rabbit5.jpg",
+        "img/rabbit5.jpg",
+        "img/rabbit5.jpg",
+        "img/rabbit5.jpg",
+        "img/rabbit5.jpg"
+      ]
+    },
+    {
+      "id": "26",
+      "name": "Sunny",
+      "type": "bird",
+      "species": "Canary",
+      "age": "12months",
+      "advert_type": "For Sale",
+      "description": "Sunny is a bright and cheerful canary with a vibrant yellow plumage. He loves to sing and fly.",
+      "price": 50,
+      "location": "New York, NY",
+      "vaccinated": true,
+      "images": [
+        "img/bird.jpg",
+        "img/bird.jpg",
+        "img/bird.jpg",
+        "img/bird.jpg",
+        "img/bird.jpg",
+        "img/bird.jpg"
+      ]
+    },
+    {
+      "id": "27",
+      "name": "Kiwi",
+      "type": "bird",
+      "species": "Cockatiel",
+      "age": "2years",
+      "advert_type": "For Adoption",
+      "description": "Kiwi is a playful and affectionate cockatiel with a grey and white plumage. She loves to cuddle and whistle.",
+      "price": 0,
+      "location": "Los Angeles, CA",
+      "vaccinated": true,
+      "images": [
+        "img/parrot1.png",
+        "img/parrot1.png",
+        "img/parrot1.png",
+        "img/parrot1.png",
+        "img/parrot1.png",
+        "img/parrot1.png",
+        "img/parrot1.png"
+      ]
+    },
+    {
+      "id": "28",
+      "name": "Peanut",
+      "type": "bird",
+      "species": "Parakeet",
+      "age": "12months",
+      "advert_type": "For Sale",
+      "description": "Peanut is a small and energetic parakeet with a bright green plumage. He loves to fly and play with toys.",
+      "price": 30,
+      "location": "Chicago, IL",
+      "vaccinated": true,
+      "images": [
+        "img/parrot2.png",
+        "img/parrot2.png",
+        "img/parrot2.png",
+        "img/parrot2.png",
+        "img/parrot2.png",
+        "img/parrot2.png",
+        "img/parrot2.png"
+      ]
+    },
+    {
+      "id": "29",
+      "name": "Lola",
+      "type": "bird",
+      "species": "Conure",
+      "age": "3years",
+      "advert_type": "For Adoption",
+      "description": "Lola is a playful and curious conure with a colorful plumage. She loves to climb and play with toys.",
+      "price": 0,
+      "location": "San Francisco, CA",
+      "vaccinated": true,
+      "images": [
+        "img/bird3.webp",
+        "img/bird3.webp",
+        "img/bird3.webp",
+        "img/bird3.webp",
+        "img/bird3.webp",
+        "img/bird3.webp"
+      ]
+    },
+    {
+      "id": "30",
+      "name": "Sammy",
+      "type": "bird",
+      "species": "Finch",
+      "age": "2years",
+      "advert_type": "Wanted",
+      "description": "Sammy is a social and active finch with a brown and white plumage. He loves to fly and socialize with other birds.",
+      "price": 20,
+      "location": "Miami, FL",
+      "vaccinated": true,
+      "images": [
+        "img/bird4.jpg",
+        "img/bird4.jpg",
+        "img/bird4.jpg",
+        "img/bird4.jpg",
+        "img/bird4.jpg",
+        "img/bird4.jpg"
+      ]
+    },
+    {
+      "id": "31",
+      "name": "Goldie",
+      "type": "fish",
+      "species": "Goldfish",
+      "age": "12months",
+      "advert_type": "For Sale",
+      "description": "Goldie is a beautiful and calm goldfish with a shiny orange scales. She loves to swim and play with bubbles.",
+      "price": 10,
+      "location": "New York, NY",
+      "tank_size": "10 gallons",
+      "images": [
+        "img/fish1.png",
+        "img/fish1.png",
+        "img/fish1.png",
+        "img/fish1.png",
+        "img/fish1.png",
+        "img/fish1.png"
+      ]
+    },
+    {
+      "id": "32",
+      "name": "Bubbles",
+      "type": "fish",
+      "species": "Guppy",
+      "age": "24months",
+      "advert_type": "For Adoption",
+      "description": "Bubbles is a colorful and lively guppy with a vibrant blue and red scales. He loves to swim and explore.",
+      "price": 0,
+      "location": "Los Angeles, CA",
+      "tank_size": "5 gallons",
+      "images": [
+        "img/fish2.png",
+        "img/fish2.png",
+        "img/fish2.png",
+        "img/fish2.png",
+        "img/fish2.png",
+        "img/fish2.png"
+      ]
+    },
+    {
+      "id": "33",
+      "name": "Finley",
+      "type": "fish",
+      "species": "Cichlid",
+      "age": "12months",
+      "advert_type": "For Sale",
+      "description": "Finley is a bold and energetic cichlid with a striking yellow and black scales. He loves to swim and defend his territory.",
+      "price": 20,
+      "location": "Chicago, IL",
+      "tank_size": "20 gallons",
+      "images": [
+        "img/fish3.jpg",
+        "img/fish3.jpg",
+        "img/fish3.jpg",
+        "img/fish3.jpg",
+        "img/fish3.jpg",
+        "img/fish3.jpg"
+      ]
+    },
+    {
+      "id": "34",
+      "name": "Scales",
+      "type": "fish",
+      "species": "Angelfish",
+      "age": "24months",
+      "advert_type": "For Adoption",
+      "description": "Scales is a majestic and peaceful angelfish with a long, flowing fins. She loves to swim and explore.",
+      "price": 0,
+      "location": "San Francisco, CA",
+      "tank_size": "30 gallons",
+      "images": [
+        "img/fish4.jpg",
+        "img/fish4.jpg",
+        "img/fish4.jpg",
+        "img/fish4.jpg",
+        "img/fish4.jpg",
+        "img/fish4.jpg"
+      ]
+    },
+    {
+      "id": "35",
+      "name": "Nemo",
+      "type": "fish",
+      "species": "Clownfish",
+      "age": "12months",
+      "advert_type": "Wanted",
+      "description": "Nemo is a bright and curious clownfish with a vibrant orange and white scales. He loves to swim and play with anemones.",
+      "price": 30,
+      "location": "Miami, FL",
+      "tank_size": "10 gallons",
+      "images": [
+        "img/fish6.jpg",
+        "img/fish6.jpg",
+        "img/fish6.jpg",
+        "img/fish6.jpg",
+        "img/fish6.jpg",
+        "img/fish6.jpg"
+      ]
+    },
+    {
+      "id": "36",
+      "name": "Starlight",
+      "type": "horse",
+      "breed": "Thoroughbred",
+      "age": "5years",
+      "advert_type": "For Sale",
+      "description": "Starlight is a beautiful and athletic thoroughbred mare with a shiny chestnut coat. She has a strong racing background and is looking for a new home.",
+      "price": 10000,
+      "location": "Kentucky, USA",
+      "height": "16.2 hands",
+      "weight": "1100 lbs",
+      "images": [
+        "img/horse5.jpg",
+        "img/horse5.jpg",
+        "img/horse5.jpg",
+        "img/horse5.jpg",
+        "img/horse5.jpg",
+        "img/horse5.jpg"
+      ]
+    },
+    {
+      "id": "37",
+      "name": "Comet",
+      "type": "horse",
+      "breed": "Quarter Horse",
+      "age": "7years",
+      "advert_type": "For Adoption",
+      "description": "Comet is a gentle and friendly quarter horse gelding with a sorrel coat. He has a calm demeanor and is suitable for beginners.",
+      "price": 0,
+      "location": "Texas, USA",
+      "height": "15.3 hands",
+      "weight": "900 lbs",
+      "images": [
+        "img/horse1.png",
+        "img/horse1.png",
+        "img/horse1.png",
+        "img/horse1.png",
+        "img/horse1.png",
+        "img/horse1.png"
+      ]
+    },
+    {
+      "id": "38",
+      "name": "Luna",
+      "type": "horse",
+      "breed": "Arabian",
+      "age": "3years",
+      "advert_type": "For Sale",
+      "description": "Luna is a stunning and athletic Arabian filly with a grey coat. She has a strong show jumping background and is looking for a new home.",
+      "price": 15000,
+      "location": "California, USA",
+      "height": "16.0 hands",
+      "weight": "1000 lbs",
+      "images": [
+        "img/horse2.png",
+        "img/horse2.png",
+        "img/horse2.png",
+        "img/horse2.png",
+        "img/horse2.png",
+        "img/horse2.png"
+      ]
+    },
+    {
+      "id": "39",
+      "name": "Ranger",
+      "type": "horse",
+      "breed": "Paint Horse",
+      "age": "10years",
+      "advert_type": "For Adoption",
+      "description": "Ranger is a friendly and gentle paint horse gelding with a white and brown coat. He has a calm demeanor and is suitable for trail riding.",
+      "price": 0,
+      "location": "Florida, USA",
+      "height": "15.2 hands",
+      "weight": "850 lbs",
+      "images": [
+        "img/horse3.jpg",
+        "img/horse3.jpg",
+        "img/horse3.jpg",
+        "img/horse3.jpg",
+        "img/horse3.jpg",
+        "img/horse3.jpg"
+      ]
+    },
+    {
+      "id": "40",
+      "name": "Dakota",
+      "type": "horse",
+      "breed": "Appaloosa",
+      "age": "6years",
+      "advert_type": "Wanted",
+      "description": "Dakota is a beautiful and athletic appaloosa mare with a spotted coat. She has a strong western pleasure background and is looking for a new home.",
+      "price": 8000,
+      "location": "Oklahoma, USA",
+      "height": "16.1 hands",
+      "weight": "1050 lbs",
+      "images": [
+        "img/horse4.jpg",
+        "img/horse4.jpg",
+        "img/horse4.jpg",
+        "img/horse4.jpg",
+        "img/horse4.jpg",
+        "img/horse4.jpg"
+      ]
+    }
+  ],
+  "Accessories": [
+    {
+      "id": "a1",
+      "category": "Dog",
+      "sub_category": "Beds",
+      "name": "Orthopedic Bed",
+      "description": "Comfortable orthopedic bed for dogs",
+      "price": 49.99,
+      "advert_type": "For Sale",
+      "size": "Large",
+      "material": "Memory Foam",
+      "images": [
+        "img/da1.png",
+        "img/da1.png",
+        "img/da1.png",
+        "img/da1.png",
+        "img/da1.png"
+      ]
+    },
+    {
+      "id": "a2",
+      "category": "Dog",
+      "sub_category": "Blankets",
+      "name": "Fleece Blanket",
+      "description": "Soft fleece blanket for dogs",
+      "price": 19.99,
+      "advert_type": "For Sale",
+      "size": "Large",
+      "material": "Fleece",
+      "images": [
+        "img/da2.png",
+        "img/da2.png",
+        "img/da2.png",
+        "img/da2.png",
+        "img/da2.png",
+        "img/da2.png"
+      ]
+    },
+    {
+      "id": "a3",
+      "category": "Dog",
+      "sub_category": "Cages",
+      "name": "Metal Cage",
+      "description": "Sturdy metal cage for dogs",
+      "price": 69.99,
+      "size": "Large",
+      "advert_type": "For Sale",
+      "material": "Metal",
+      "images": [
+        "img/da7.png",
+        "img/da7.png",
+        "img/da7.png",
+        "img/da7.png",
+        "img/da7.png",
+        "img/da7.png",
+        "img/da7.png"
+      ]
+    },
+    {
+      "id": "a4",
+      "category": "Dog",
+      "sub_category": "Clothing & Accessories",
+      "name": "T-Shirt",
+      "description": "Comfortable t-shirt for dogs",
+      "price": 9.99,
+      "size": "Small",
+      "advert_type": "For Sale",
+      "material": "Cotton",
+      "images": [
+        "img/da10.png",
+        "img/da10.png",
+        "img/da10.png",
+        "img/da10.png",
+        "img/da10.png",
+        "img/da10.png"
+      ]
+    },
+    {
+      "id": "a5",
+      "category": "Dog",
+      "sub_category": "Collars & Leashes",
+      "name": "Leather Collar",
+      "description": "Stylish leather collar for dogs",
+      "price": 14.99,
+      "size": "Medium",
+      "advert_type": "For Sale",
+      "material": "Leather",
+      "images": [
+        "img/da6.png",
+        "img/da6.png",
+        "img/da6.png",
+        "img/da6.png",
+        "img/da6.png",
+        "img/da6.png"
+      ]
+    },
+    {
+      "id": "a6",
+      "category": "Dog",
+      "sub_category": "Food",
+      "name": "Dog Food",
+      "description": "Nutritious dog food for dogs",
+      "price": 29.99,
+      "size": "Large",
+      "advert_type": "For Sale",
+      "material": "Food",
+      "images": [
+        "img/da3.png",
+        "img/da3.png",
+        "img/da3.png",
+        "img/da3.png",
+        "img/da3.png"
+      ]
+    },
+    {
+      "id": "a7",
+      "category": "Dog",
+      "sub_category": "Grooming",
+      "name": "Brush",
+      "description": "Soft brush for dogs",
+      "price": 9.99,
+      "size": "Small",
+      "advert_type": "For Sale",
+      "material": "Plastic",
+      "images": [
+        "img/da4.png",
+        "img/da4.png",
+        "img/da4.png",
+        "img/da4.png",
+        "img/da4.png"
+      ]
+    },
+    {
+      "id": "a8",
+      "category": "Dog",
+      "sub_category": "Harnesses",
+      "name": "Leather Harness",
+      "description": "Stylish leather harness for dogs",
+      "price": 24.99,
+      "size": "Medium",
+      "advert_type": "For Sale",
+      "material": "Leather",
+      "images": [
+        "img/da6.png",
+        "img/da6.png",
+        "img/da6.png",
+        "img/da6.png",
+        "img/da6.png",
+        "img/da6.png"
+      ]
+    },
+    {
+      "id": "a9",
+      "category": "Dog",
+      "sub_category": "Other Dog Accessories",
+      "name": "Toys",
+      "description": "Fun toys for dogs",
+      "price": 9.99,
+      "size": "Small",
+      "advert_type": "For Sale",
+      "material": "Plastic",
+      "images": [
+        "img/da12.png",
+        "img/da12.png",
+        "img/da12.png",
+        "img/da12.png",
+        "img/da12.png",
+        "img/da12.png"
+      ]
+    },
+    {
+      "id": "a10",
+      "category": "Cat",
+      "sub_category": "Toys",
+      "name": "Feather Wand",
+      "description": "Interactive feather wand toy for cats",
+      "price": 9.99,
+      "size": "Standard",
+      "advert_type": "For Sale",
+      "material": "Feather and Fabric",
+      "images": [
+        "img/da12.png",
+        "img/da12.png",
+        "img/da12.png",
+        "img/da12.png",
+        "img/da12.png",
+        "img/da12.png"
+      ]
+    },
+    {
+      "id": "a11",
+      "category": "Cat",
+      "sub_category": "Litter Boxes",
+      "name": "Self-Cleaning Litter Box",
+      "description": "Automatic self-cleaning litter box for cats",
+      "price": 99.99,
+      "size": "Large",
+      "advert_type": "For Wanted",
+      "material": "Plastic",
+      "images": [
+        "img/catac19.jpg",
+        "img/catac19.jpg",
+        "img/catac19.jpg",
+        "img/catac19.jpg",
+        "img/catac19.jpg",
+        "img/catac19.jpg"
+      ]
+    },
+    {
+      "id": "a12",
+      "category": "Cat",
+      "sub_category": "Food",
+      "name": "Stainless Steel Bowl",
+      "description": "Durable stainless steel food and water bowl for cats",
+      "price": 14.99,
+      "size": "Medium",
+      "advert_type": "For Wanted",
+      "material": "Stainless Steel",
+      "images": [
+        "img/da3.png",
+        "img/da3.png",
+        "img/da3.png",
+        "img/da3.png",
+        "img/da3.png"
+      ]
+    },
+    {
+      "id": "a13",
+      "category": "Cat",
+      "sub_category": "Grooming",
+      "name": "Brush",
+      "description": "Soft-bristle brush for gentle cat grooming",
+      "price": 7.99,
+      "size": "Small",
+      "advert_type": "For wanted",
+      "material": "Plastic and Bristle",
+      "images": [
+        "img/da8.png",
+        "img/da8.png",
+        "img/da8.png",
+        "img/da8.png",
+        "img/da8.png",
+        "img/da8.png"
+      ]
+    },
+    {
+      "id": "a14",
+      "category": "Cat",
+      "sub_category": "Scratching Posts",
+      "name": "Sisal Rope Post",
+      "description": "Sturdy sisal rope scratching post for cats",
+      "price": 29.99,
+      "advert_type": "For wanted",
+      "size": "Tall",
+      "material": "Sisal Rope and Wood",
+      "images": [
+        "img/catas14.jpg",
+        "img/catas14.jpg",
+        "img/catas14.jpg",
+        "img/catas14.jpg",
+        "img/catas14.jpg",
+        "img/catas14.jpg"
+      ]
+    },
+    {
+      "id": "a15",
+      "category": "Cat",
+      "sub_category": "Carriers",
+      "name": "Soft-Sided Carrier",
+      "description": "Comfortable soft-sided carrier for cats",
+      "price": 39.99,
+      "advert_type": "For wanted",
+      "size": "Medium",
+      "material": "Nylon and Mesh",
+      "images": [
+        "img/catCarriers.jpg",
+        "img/catCarriers.jpg",
+        "img/catCarriers.jpg",
+        "img/catCarriers.jpg",
+        "img/catCarriers.jpg",
+        "img/catCarriers.jpg"
+      ]
+    },
+    {
+      "id": "a16",
+      "category": "Cat",
+      "sub_category": "Health",
+      "name": "Flea and Tick Prevention",
+      "description": "Effective flea and tick prevention medication for cats",
+      "price": 19.99,
+      "advert_type": "For Sale",
+      "size": "Small",
+      "material": "Medication",
+      "images": [
+        "img/s5.png",
+        "img/s5.png",
+        "img/s5.png",
+        "img/s5.png",
+        "img/s5.png",
+        "img/s5.png"
+      ]
+    },
+    {
+      "id": "a17",
+      "category": "Cat",
+      "sub_category": "Bed",
+      "name": "Orthopedic Bed",
+      "description": "Supportive orthopedic bed for cats",
+      "price": 49.99,
+      "advert_type": "For wanted",
+      "size": "Large",
+      "material": "Memory Foam",
+      "images": [
+        "img/catac17.jpg",
+        "img/catac17.jpg",
+        "img/catac17.jpg",
+        "img/catac17.jpg",
+        "img/catac17.jpg",
+        "img/catac17.jpg"
+      ]
+    },
+    {
+      "id": "a18",
+      "category": "Cat",
+      "sub_category": "Clothing",
+      "name": "Sweater",
+      "description": "Cozy sweater for cats",
+      "price": 12.99,
+      "advert_type": "For wanted",
+      "size": "Small",
+      "material": "Cotton",
+      "images": [
+        "img/catac18.jpg",
+        "img/catac18.jpg",
+        "img/catac18.jpg",
+        "img/catac18.jpg",
+        "img/catac18.jpg",
+        "img/catac18.jpg"
+      ]
+    },
+    {
+      "id": "a21",
+      "category": "Cat",
+      "sub_category": "Playpens",
+      "name": "Portable Playpen",
+      "description": "Portable playpen for cats",
+      "price": 29.99,
+      "advert_type": "For wanted",
+      "size": "Large",
+      "material": "Fabric and Metal",
+      "images": [
+        "img/catac19.jpg",
+        "img/catac19.jpg",
+        "img/catac19.jpg",
+        "img/catac19.jpg",
+        "img/catac19.jpg",
+        "img/catac19.jpg"
+      ]
+    },
+    {
+      "id": "a22",
+      "category": "Rabbit",
+      "sub_category": "Cages",
+      "name": "Large Rabbit Cage",
+      "description": "Spacious cage for rabbits with multiple levels",
+      "price": 99.99,
+      "advert_type": "For wanted",
+      "size": "Large",
+      "material": "Metal and Wood",
+      "images": [
+        "img/ra1.jpg",
+        "img/ra1.jpg",
+        "img/ra1.jpg",
+        "img/ra1.jpg",
+        "img/ra1.jpg",
+        "img/ra1.jpg"
+      ]
+    },
+    {
+      "id": "a23",
+      "category": "Rabbit",
+      "sub_category": "Food",
+      "name": "Rabbit Pellets",
+      "description": "Nutritious rabbit pellets for optimal health",
+      "price": 14.99,
+      "advert_type": "For Sale",
+      "size": "5 lbs",
+      "material": "Food",
+      "images": [
+        "img/ra2.jpg",
+        "img/ra2.jpg",
+        "img/ra2.jpg",
+        "img/ra2.jpg",
+        "img/ra2.jpg",
+        "img/ra2.jpg"
+      ]
+    },
+    {
+      "id": "a24",
+      "category": "Rabbit",
+      "sub_category": "Litter Boxes",
+      "name": "Rabbit Litter Box",
+      "description": "Easy-to-clean litter box for rabbits",
+      "price": 19.99,
+      "advert_type": "For wanted",
+      "size": "Small",
+      "material": "Plastic",
+      "images": [
+        "img/ra3.jpg",
+        "img/ra3.jpg",
+        "img/ra3.jpg",
+        "img/ra3.jpg",
+        "img/ra3.jpg",
+        "img/ra3.jpg"
+      ]
+    },
+    {
+      "id": "a25",
+      "category": "Rabbit",
+      "sub_category": "Toys",
+      "name": "Rabbit Chew Toy",
+      "description": "Durable chew toy for rabbits to keep them occupied",
+      "price": 7.99,
+      "advert_type": "For wanted",
+      "size": "Small",
+      "material": "Wood and Rope",
+      "images": [
+        "img/ra4.jpg",
+        "img/ra4.jpg",
+        "img/ra4.jpg",
+        "img/ra4.jpg",
+        "img/ra4.jpg",
+        "img/ra4.jpg"
+      ]
+    },
+    {
+      "id": "a26",
+      "category": "Rabbit",
+      "sub_category": "Grooming",
+      "name": "Rabbit Brush",
+      "description": "Soft-bristle brush for gentle rabbit grooming",
+      "price": 9.99,
+      "advert_type": "For wanted",
+      "size": "Small",
+      "material": "Plastic and Bristle",
+      "images": [
+        "img/ra5.jpg",
+        "img/ra5.jpg",
+        "img/ra5.jpg",
+        "img/ra5.jpg",
+        "img/ra5.jpg",
+        "img/ra5.jpg"
+      ]
+    },
+    {
+      "id": "a27",
+      "category": "Rabbit",
+      "sub_category": "Health",
+      "name": "Rabbit Vitamins",
+      "description": "Essential vitamins for rabbit health and wellness",
+      "price": 12.99,
+      "advert_type": "For Sale",
+      "size": "Small",
+      "material": "Supplement",
+      "images": [
+        "img/ra7.webp",
+        "img/ra7.webp",
+        "img/ra7.webp",
+        "img/ra7.webp",
+        "img/ra7.webp",
+        "img/ra7.webp"
+      ]
+    },
+    {
+      "id": "a29",
+      "category": "Rabbit",
+      "sub_category": "Bed",
+      "name": "Rabbit Bedding",
+      "description": "Soft and comfortable bedding for rabbits",
+      "price": 14.99,
+      "advert_type": "For Sale",
+      "size": "Large",
+      "material": "Wood Shavings",
+      "images": [
+        "img/ra8.jpg",
+        "img/ra8.jpg",
+        "img/ra8.jpg",
+        "img/ra8.jpg",
+        "img/ra8.jpg",
+        "img/ra8.jpg"
+      ]
+    },
+    {
+      "id": "a34",
+      "category": "Birds",
+      "sub_category": "Cages",
+      "name": "Large Bird Cage",
+      "description": "Spacious cage for birds with multiple perches",
+      "price": 129.99,
+      "advert_type": "For wanted",
+      "size": "Large",
+      "material": "Metal and Wood",
+      "images": [
+        "img/ba1.jpg",
+        "img/ba1.jpg",
+        "img/ba1.jpg",
+        "img/ba1.jpg",
+        "img/ba1.jpg",
+        "img/ba1.jpg"
+      ]
+    },
+    {
+      "id": "a35",
+      "category": "Birds",
+      "sub_category": "Food",
+      "name": "Bird Seed",
+      "description": "Nutritious bird seed for optimal health",
+      "price": 19.99,
+      "advert_type": "For wanted",
+      "size": "5 lbs",
+      "material": "Food",
+      "images": [
+        "img/ba2.jpg",
+        "img/ba2.jpg",
+        "img/ba2.jpg",
+        "img/ba2.jpg",
+        "img/ba2.jpg",
+        "img/ba2.jpg"
+      ]
+    },
+    {
+      "id": "a36",
+      "category": "Birds",
+      "sub_category": "Toys",
+      "name": "Bird Swing",
+      "description": "Fun and stimulating swing for birds to play",
+      "price": 14.99,
+      "advert_type": "For Sale",
+      "size": "Small",
+      "material": "Wood and Rope",
+      "images": [
+        "img/ba3.jpg",
+        "img/ba3.jpg",
+        "img/ba3.jpg",
+        "img/ba3.jpg",
+        "img/ba3.jpg",
+        "img/ba3.jpg"
+      ]
+    },
+    {
+      "id": "a37",
+      "category": "Birds",
+      "sub_category": "Perches",
+      "name": "Bird Perch",
+      "description": "Comfortable perch for birds to rest and exercise",
+      "price": 9.99,
+      "advert_type": "For wanted",
+      "size": "Small",
+      "material": "Wood",
+      "images": [
+        "img/ba4.jpg",
+        "img/ba4.jpg",
+        "img/ba4.jpg",
+        "img/ba4.jpg",
+        "img/ba4.jpg",
+        "img/ba4.jpg"
+      ]
+    },
+    {
+      "id": "a38",
+      "category": "Birds",
+      "sub_category": "Nesting",
+      "name": "Bird Nesting Box",
+      "description": "Cozy nesting box for birds to lay eggs",
+      "price": 29.99,
+      "advert_type": "For wanted",
+      "size": "Small",
+      "material": "Wood",
+      "images": [
+        "img/ba5.jpg",
+        "img/ba5.jpg",
+        "img/ba5.jpg",
+        "img/ba5.jpg",
+        "img/ba5.jpg",
+        "img/ba5.jpg"
+      ]
+    },
+    {
+      "id": "a39",
+      "category": "Birds",
+      "sub_category": "Baths",
+      "name": "Bird Bath",
+      "description": "Clean and refreshing bath for birds",
+      "price": 19.99,
+      "advert_type": "For wanted",
+      "size": "Small",
+      "material": "Plastic",
+      "images": [
+        "img/ba6.jpg",
+        "img/ba6.jpg",
+        "img/ba6.jpg",
+        "img/ba6.jpg",
+        "img/ba6.jpg",
+        "img/ba6.jpg"
+      ]
+    },
+    {
+      "id": "a40",
+      "category": "Birds",
+      "sub_category": "Carriers",
+      "name": "Bird Carrier",
+      "description": "Comfortable carrier for transporting birds",
+      "price": 39.99,
+      "advert_type": "For Sale",
+      "size": "Medium",
+      "material": "Nylon and Mesh",
+      "images": [
+        "img/ba7.jpg",
+        "img/ba7.jpg",
+        "img/ba7.jpg",
+        "img/ba7.jpg",
+        "img/ba7.jpg",
+        "img/ba7.jpg"
+      ]
+    },
+    {
+      "id": "a43",
+      "category": "Birds",
+      "sub_category": "Grooming",
+      "name": "Bird Grooming Kit",
+      "description": "Complete grooming kit for birds",
+      "price": 24.99,
+      "advert_type": "For wanted",
+      "size": "Small",
+      "material": "Various",
+      "images": [
+        "img/ba8.webp",
+        "img/ba8.webp",
+        "img/ba8.webp",
+        "img/ba8.webp",
+        "img/ba8.webp",
+        "img/ba8.webp"
+      ]
+    },
+    {
+      "id": "a44",
+      "category": "Fish",
+      "sub_category": "Aquariums",
+      "name": "10 Gallon Aquarium",
+      "description": "Spacious aquarium for small fish and aquatic plants",
+      "price": 49.99,
+      "advert_type": "For wanted",
+      "size": "10 Gallon",
+      "material": "Glass",
+      "images": [
+        "img/fa1.jpg",
+        "img/fa1.jpg",
+        "img/fa1.jpg",
+        "img/fa1.jpg",
+        "img/fa1.jpg",
+        "img/fa1.jpg"
+      ]
+    },
+    {
+      "id": "a45",
+      "category": "Fish",
+      "sub_category": "Food",
+      "name": "Fish Flakes",
+      "description": "Nutritious fish flakes for optimal health",
+      "price": 9.99,
+      "advert_type": "For wanted",
+      "size": "1 lb",
+      "material": "Food",
+      "images": [
+        "img/fa2.jpg",
+        "img/fa2.jpg",
+        "img/fa2.jpg",
+        "img/fa2.jpg",
+        "img/fa2.jpg",
+        "img/fa2.jpg"
+      ]
+    },
+    {
+      "id": "a46",
+      "category": "Fish",
+      "sub_category": "Filters",
+      "name": "Aquarium Filter",
+      "description": "Effective filter for clean and healthy aquarium water",
+      "price": 29.99,
+      "advert_type": "For Sale",
+      "size": "Small",
+      "material": "Plastic and Carbon",
+      "images": [
+        "img/fa3.jpg",
+        "img/fa3.jpg",
+        "img/fa3.jpg",
+        "img/fa3.jpg",
+        "img/fa3.jpg",
+        "img/fa3.jpg"
+      ]
+    },
+    {
+      "id": "a47",
+      "category": "Fish",
+      "sub_category": "Heaters",
+      "name": "Aquarium Heater",
+      "description": "Reliable heater for maintaining optimal aquarium temperature",
+      "price": 19.99,
+      "advert_type": "For wanted",
+      "size": "Small",
+      "material": "Plastic and Metal",
+      "images": [
+        "img/fa4.webp",
+        "img/fa4.webp",
+        "img/fa4.webp",
+        "img/fa4.webp",
+        "img/fa4.webp",
+        "img/fa4.webp"
+      ]
+    },
+    {
+      "id": "a49",
+      "category": "Fish",
+      "sub_category": "Pumps",
+      "name": "Aquarium Pump",
+      "description": "Powerful pump for creating water circulation and movement",
+      "price": 39.99,
+      "advert_type": "For wanted",
+      "size": "Small",
+      "material": "Plastic and Metal",
+      "images": [
+        "img/fa5.webp",
+        "img/fa5.webp",
+        "img/fa5.webp",
+        "img/fa5.webp",
+        "img/fa5.webp",
+        "img/fa5.webp"
+      ]
+    },
+    {
+      "id": "a50",
+      "category": "Fish",
+      "sub_category": "Lighting",
+      "name": "Aquarium LED Light",
+      "description": "Energy-efficient LED light for aquarium illumination",
+      "price": 29.99,
+      "advert_type": "For wanted",
+      "size": "Small",
+      "material": "Plastic and LED",
+      "images": [
+        "img/fa6.jpg",
+        "img/fa6.jpg",
+        "img/fa6.jpg",
+        "img/fa6.jpg",
+        "img/fa6.jpg",
+        "img/fa6.jpg"
+      ]
+    },
+    {
+      "id": "a51",
+      "category": "Fish",
+      "sub_category": "Water Care",
+      "name": "Water Conditioner",
+      "description": "Effective water conditioner for removing chlorine and chloramines",
+      "price": 9.99,
+      "advert_type": "For Sale",
+      "size": "Small",
+      "material": "Liquid",
+      "images": [
+        "img/fa7.jpg",
+        "img/fa7.jpg",
+        "img/fa7.jpg",
+        "img/fa7.jpg",
+        "img/fa7.jpg",
+        "img/fa7.jpg"
+      ]
+    },
+    {
+      "id": "a53",
+      "category": "Fish",
+      "sub_category": "Netting",
+      "name": "Fish Net",
+      "description": "Soft and gentle fish net for catching and handling fish",
+      "price": 4.99,
+      "advert_type": "For wanted",
+      "size": "Small",
+      "material": "Nylon",
+      "images": [
+        "img/fa8.jpg",
+        "img/fa8.jpg",
+        "img/fa8.jpg",
+        "img/fa8.jpg",
+        "img/fa8.jpg",
+        "img/fa8.jpg"
+      ]
+    },
+    {
+      "id": "a54",
+      "category": "Horses",
+      "sub_category": "Saddles",
+      "name": "Western Saddle",
+      "description": "High-quality western saddle for comfortable riding",
+      "price": 499.99,
+      "advert_type": "For wanted",
+      "size": "Medium",
+      "material": "Leather",
+      "images": [
+        "img/ha1.webp",
+        "img/ha1.webp",
+        "img/ha1.webp",
+        "img/ha1.webp",
+        "img/ha1.webp",
+        "img/ha1.webp"
+      ]
+    },
+    {
+      "id": "a55",
+      "category": "Horses",
+      "sub_category": "Bridles",
+      "name": "English Bridle",
+      "description": "Durable English bridle for precise communication",
+      "price": 99.99,
+      "advert_type": "For Sale",
+      "size": "Small",
+      "material": "Leather",
+      "images": [
+        "img/ha2.webp",
+        "img/ha2.webp",
+        "img/ha2.webp",
+        "img/ha2.webp",
+        "img/ha2.webp",
+        "img/ha2.webp"
+      ]
+    },
+    {
+      "id": "a56",
+      "category": "Horses",
+      "sub_category": "Halters",
+      "name": "Nylon Halter",
+      "description": "Strong and durable nylon halter for everyday use",
+      "price": 29.99,
+      "advert_type": "For wanted",
+      "size": "Small",
+      "material": "Nylon",
+      "images": [
+        "img/ha3.webp",
+        "img/ha3.webp",
+        "img/ha3.webp",
+        "img/ha3.webp",
+        "img/ha3.webp",
+        "img/ha3.webp"
+      ]
+    },
+    {
+      "id": "a57",
+      "category": "Horses",
+      "sub_category": "Grooming",
+      "name": "Grooming Kit",
+      "description": "Complete grooming kit for horse care and maintenance",
+      "price": 49.99,
+      "advert_type": "For Sale",
+      "size": "Small",
+      "material": "Various",
+      "images": [
+        "img/ha4.jpg",
+        "img/ha4.jpg",
+        "img/ha4.jpg",
+        "img/ha4.jpg",
+        "img/ha4.jpg",
+        "img/ha4.jpg"
+      ]
+    },
+    {
+      "id": "a58",
+      "category": "Horses",
+      "sub_category": "Feed",
+      "name": "Equine Feed",
+      "description": "Nutritious equine feed for optimal horse health",
+      "price": 29.99,
+      "advert_type": "For wanted",
+      "size": "50 lbs",
+      "material": "Food",
+      "images": [
+        "img/ha5.jpeg",
+        "img/ha5.jpeg",
+        "img/ha5.jpeg",
+        "img/ha5.jpeg",
+        "img/ha5.jpeg",
+        "img/ha5.jpeg"
+      ]
+    },
+    {
+      "id": "a60",
+      "category": "Horses",
+      "sub_category": "Fencing",
+      "name": "Fence Post",
+      "description": "Durable fence post for secure horse enclosure",
+      "price": 49.99,
+      "advert_type": "For Sale",
+      "size": "6 ft",
+      "material": "Wood",
+      "images": [
+        "img/ha6.jpg",
+        "img/ha6.jpg",
+        "img/ha6.jpg",
+        "img/ha6.jpg",
+        "img/ha6.jpg",
+        "img/ha6.jpg"
+      ]
+    },
+    {
+      "id": "a61",
+      "category": "Horses",
+      "sub_category": "Trailers",
+      "name": "Horse Trailer",
+      "description": "Safe and comfortable horse trailer for transportation",
+      "price": 999.99,
+      "advert_type": "For wanted",
+      "size": "2 Horse",
+      "material": "Metal and Rubber",
+      "images": [
+        "img/ha7.jpg",
+        "img/ha7.jpg",
+        "img/ha7.jpg",
+        "img/ha7.jpg",
+        "img/ha7.jpg",
+        "img/ha7.jpg"
+      ]
+    },
+    {
+      "id": "a62",
+      "category": "Horses",
+      "sub_category": "Blankets",
+      "name": "Waterproof Blanket",
+      "description": "Waterproof blanket for horse comfort and protection",
+      "price": 79.99,
+      "advert_type": "For Sale",
+      "size": "Medium",
+      "material": "Nylon",
+      "images": [
+        "img/ha8.jpg",
+        "img/ha8.jpg",
+        "img/ha8.jpg",
+        "img/ha8.jpg",
+        "img/ha8.jpg",
+        "img/ha8.jpg"
+      ]
+    }
+  ],
+  "Services": [
+    {
+      "id": "001",
+      "name": "Animal Jobs",
+      "description": "Various animal-related jobs",
+      "price": 50,
+      "advert_type": "For wanted",
+      "duration": "Flexible",
+      "location": "On-site",
+      "images": [
+        "img/s2.png",
+        "img/s2.png",
+        "img/s2.png",
+        "img/s2.png",
+        "img/s2.png",
+        "img/s2.png"
+      ]
+    },
+    {
+      "id": "002",
+      "name": "Boarding",
+      "description": "Pet boarding services for dogs and other animals",
+      "price": 30,
+      "advert_type": "For Sale",
+      "duration": "Minimum 1 night",
+      "location": "Facility-based",
+      "images": [
+        "img/s4.png",
+        "img/s4.png",
+        "img/s4.png",
+        "img/s4.png",
+        "img/s4.png",
+        "img/s4.png"
+      ]
+    },
+    {
+      "id": "003",
+      "name": "Daycare",
+      "description": "Pet daycare services for dogs and other animals",
+      "price": 20,
+      "advert_type": "For wanted",
+      "duration": "Half-day or full-day",
+      "location": "Facility-based",
+      "images": [
+        "img/s1.png",
+        "img/s1.png",
+        "img/s1.png",
+        "img/s1.png",
+        "img/s1.png",
+        "img/s1.png"
+      ]
+    },
+    {
+      "id": "004",
+      "name": "Dog Walking",
+      "description": "Dog walking services for pet owners",
+      "price": 15,
+      "advert_type": "For wanted",
+      "duration": "30 minutes to 1 hour",
+      "location": "On-site",
+      "images": [
+        "img/s2.png",
+        "img/s2.png",
+        "img/s2.png",
+        "img/s2.png",
+        "img/s2.png",
+        "img/s2.png"
+      ]
+    },
+    {
+      "id": "005",
+      "name": "Grooming / Care",
+      "description": "Pet grooming and care services",
+      "price": 40,
+      "advert_type": "For wanted",
+      "duration": "30 minutes to 2 hours",
+      "location": "Facility-based",
+      "images": [
+        "img/s6.png",
+        "img/s6.png",
+        "img/s6.png",
+        "img/s6.png",
+        "img/s6.png",
+        "img/s6.png"
+      ]
+    },
+    {
+      "id": "006",
+      "name": "Horse Share",
+      "description": "Horse sharing services for horse owners",
+      "price": 200,
+      "advert_type": "For wanted",
+      "duration": "Monthly",
+      "location": "On-site",
+      "images": [
+        "img/s3.png",
+        "img/s3.png",
+        "img/s3.png",
+        "img/s3.png",
+        "img/s3.png",
+        "img/s3.png"
+      ]
+    },
+    {
+      "id": "007",
+      "name": "Holiday for Pets",
+      "description": "Pet holiday services for pet owners",
+      "price": 80,
+      "advert_type": "For wanted",
+      "duration": "Minimum 1 day",
+      "location": "Facility-based",
+      "images": [
+        "img/s6.png",
+        "img/s6.png",
+        "img/s6.png",
+        "img/s6.png",
+        "img/s6.png",
+        "img/s6.png"
+      ]
+    },
+    {
+      "id": "008",
+      "name": "Pasture",
+      "description": "Pasture services for horses and other animals",
+      "price": 30,
+      "advert_type": "For offered",
+      "duration": "Monthly",
+      "location": "On-site",
+      "images": [
+        "img/s3.png",
+        "img/s3.png",
+        "img/s3.png",
+        "img/s3.png",
+        "img/s3.png",
+        "img/s3.png"
+      ]
+    },
+    {
+      "id": "009",
+      "name": "Riding Holidays",
+      "description": "Riding holiday services for horse owners",
+      "price": 250,
+      "advert_type": "For offered",
+      "duration": "Minimum 1 day",
+      "location": "On-site",
+      "images": [
+        "img/s3.png",
+        "img/s3.png",
+        "img/s3.png",
+        "img/s3.png",
+        "img/s3.png",
+        "img/s3.png"
+      ]
+    },
+    {
+      "id": "010",
+      "name": "Training",
+      "description": "Pet training services for dogs and other animals",
+      "price": 60,
+      "advert_type": "For offered",
+      "duration": "30 minutes to 2 hours",
+      "location": "Facility-based",
+      "images": [
+        "img/s2.png",
+        "img/s2.png",
+        "img/s2.png",
+        "img/s2.png",
+        "img/s2.png",
+        "img/s2.png"
+      ]
+    },
+    {
+      "id": "011",
+      "name": "Other Service",
+      "description": "Other pet services not listed above",
+      "price": 100,
+      "advert_type": "For offered",
+      "duration": "Flexible",
+      "location": "On-site",
+      "images": [
+        "img/s2.png",
+        "img/s2.png",
+        "img/s2.png",
+        "img/s2.png",
+        "img/s2.png",
+        "img/s2.png"
+      ]
+    },
+    {
+      "id": "012",
+      "name": "Pet Photography",
+      "description": "Pet photography services",
+      "price": 75,
+      "advert_type": "For offered",
+      "duration": "1-2 hours",
+      "location": "On-site",
+      "images": [
+        "img/s5.png",
+        "img/s5.png",
+        "img/s5.png",
+        "img/s5.png",
+        "img/s5.png",
+        "img/s5.png"
+      ]
+    }
+  ],
+  "wishlist": [
+    {
+      "id": "a1",
+      "category": "Dog",
+      "sub_category": "Beds",
+      "name": "Orthopedic Bed",
+      "description": "Comfortable orthopedic bed for dogs",
+      "price": 49.99,
+      "size": "Large",
+      "material": "Memory Foam",
+      "images": [
+        "img/da1.png",
+        "img/da1.png",
+        "img/da1.png",
+        "img/da1.png",
+        "img/da1.png"
+      ]
+    }
+  ]
+}
