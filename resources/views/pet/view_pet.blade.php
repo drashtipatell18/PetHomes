@@ -82,9 +82,12 @@
                         </thead>
                         <tbody>
                             @foreach ($pets as $index => $pet)
+                                @php
+                                    $files = explode(',', $pet->image);
+                                @endphp
                                 <tr class="">
                                     <td class="text-center">{{ $index + 1 }}</td>
-                                    <td class="text-center"><img src="{{ asset('images/' . $pet->image) }}"
+                                    <td class="text-center"><img src="{{ asset('images/' . $files[0]) }}"
                                             class="img-fixed-height" width="100px" height="100px"></td>
                                     <td class="text-center">
                                         @isset($pet->user->name)

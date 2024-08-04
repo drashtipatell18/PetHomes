@@ -27,7 +27,7 @@
                     <h3 class="text-center title-2">{{ isset($pets) ? 'Edit Pet' : 'Add Pet' }}</h3>
                 </div>
                 <hr>
-                <form action="{{ isset($pets) ? '/admin/pet/update/' . $pets->id : '/pet/store' }}" method="POST"
+                <form action="{{ isset($pets) ? '/admin/pet/update/' . $pets->id : '/admin/pet/store' }}" method="POST"
                     enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
@@ -123,7 +123,7 @@
                     </div>
                     <div class="form-group">
                         <label for="image" class="control-label mb-1">Image</label>
-                        <input type="file" id="profilepicInput" class="form-control" name="image">
+                        <input multiple type="file" id="profilepicInput" class="form-control" name="image[]">
                         @error('image')
                             <span class="invalid-feedback" style="color: red">
                                 <strong>{{ $message }}</strong>

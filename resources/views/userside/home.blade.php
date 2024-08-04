@@ -59,18 +59,21 @@
         <img src="user-side/img/paw-h2.png" alt="" class="m_paw2">
         <div class="m_rec " id="recommended">
             @foreach ($pets as $pet)
+            @php
+                $files = explode(',', $pet->image);
+            @endphp
             <a class="ProductWrapper " href="/viewpet/{{$pet->id}}">
                 <div class="product">
-                    <i class="fa-regular fa-heart m_wishIc"></i>
+                    <i data-petid="{{$pet->id}}" class="fa-regular fa-heart m_wishIc"></i>
                     <div class="productImage">
-                        <img src="/images/{{$pet->image}}" class="d-block w-100" alt="...">
+                        <img src="/images/{{$files[0]}}" class="d-block w-100" alt="...">
                     </div>
                     <div class="productDetail">
                         <p class="m_prPre">{{$pet->breed}}</p>
                         <h5 class="m_prTtl">{{$pet->name}}</h5>
                         <div class="m_pcon d-flex justify-content-between">
                             <span>{{$pet->place}}</span>
-                            <p class="mb-0">$ 200.00</p>
+                            <p class="mb-0">₹ {{$pet->price}}</p>
                         </div>
                     </div>
                 </div>
@@ -147,7 +150,7 @@
             @foreach ($products as $product)
             <a class="ProductWrapper " href="/product/{{$product->id}}">
                 <div class="product">
-                    <i class="fa-regular fa-heart m_wishIc"></i>
+                    <i data-productid="{{$product->id}}" class="fa-regular fa-heart m_wishIc"></i>
                     <div class="productImage">
                         <img src="/images/{{$product->image}}" class="d-block w-100" alt="...">
                     </div>
@@ -181,7 +184,23 @@
         <h3 class="m_titl " style="margin-bottom: 0;">Popular Cat Breeds</h3>
         <div class="m_recCo">
             <div class="m_rec " id="popularcat">
-                <a class="ProductWrapper " href="dog_view.html">
+                @foreach ($cats as $cat)
+                @php
+                    $files = explode(',', $cat->image);
+                @endphp
+                <a class="ProductWrapper " href="/viewpet/{{$cat->id}}">
+                    <div class="product">
+                        <i data-petid="{{$cat->id}}" class="fa-regular fa-heart m_wishIc"></i>
+                        <div class="productImage">
+                            <img src="/images/{{$files[0]}}" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="productDetail">
+                            <h6 class="m_Ttl">{{$cat->name}}</h6>
+                        </div>
+                    </div>
+                </a>
+                @endforeach
+                {{-- <a class="ProductWrapper " href="dog_view.html">
                     <div class="product">
                         <i class="fa-regular fa-heart m_wishIc"></i>
                         <div class="productImage">
@@ -191,51 +210,7 @@
                             <h6 class="m_Ttl">Ragdoll</h6>
                         </div>
                     </div>
-                </a>
-                <a class="ProductWrapper " href="dog_view.html">
-                    <div class="product">
-                        <i class="fa-regular fa-heart m_wishIc"></i>
-                        <div class="productImage">
-                            <img src="user-side/img/hc2.png" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="productDetail">
-                            <h6 class="m_Ttl">Russian Blue</h6>
-                        </div>
-                    </div>
-                </a>
-                <a class="ProductWrapper " href="dog_view.html">
-                    <div class="product">
-                        <i class="fa-regular fa-heart m_wishIc"></i>
-                        <div class="productImage">
-                            <img src="user-side/img/hc3.png" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="productDetail">
-                            <h6 class="m_Ttl">American Curl</h6>
-                        </div>
-                    </div>
-                </a>
-                <a class="ProductWrapper " href="dog_view.html">
-                    <div class="product">
-                        <i class="fa-regular fa-heart m_wishIc"></i>
-                        <div class="productImage">
-                            <img src="user-side/img/hc4.png" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="productDetail">
-                            <h6 class="m_Ttl">Khao Manee</h6>
-                        </div>
-                    </div>
-                </a>
-                <a class="ProductWrapper " href="dog_view.html">
-                    <div class="product">
-                        <i class="fa-regular fa-heart m_wishIc"></i>
-                        <div class="productImage">
-                            <img src="user-side/img/hc5.png" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="productDetail">
-                            <h6 class="m_Ttl">British Shorthair</h6>
-                        </div>
-                    </div>
-                </a>
+                </a> --}}
             </div>
         </div>
     </section>
@@ -247,7 +222,23 @@
     <h3 class="m_titl " style="margin-bottom: 0;">Popular Dog Breeds</h3>
     <div class="m_recCo">
         <div class="m_rec " id="populardog">
-            <a class="ProductWrapper " href="dog_view.html">
+            @foreach ($dogs as $dog)
+            @php
+                $files = explode(',', $dog->image);
+            @endphp
+            <a class="ProductWrapper " href="/viewpet/{{$dog->id}}">
+                <div class="product">
+                    <i data-petid="{{$dog->id}}" class="fa-regular fa-heart m_wishIc"></i>
+                    <div class="productImage">
+                        <img src="/images/{{$files[0]}}" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="productDetail">
+                        <h6 class="m_Ttl">{{$dog->name}}</h6>
+                    </div>
+                </div>
+            </a>
+            @endforeach
+            {{-- <a class="ProductWrapper " href="dog_view.html">
                 <div class="product">
                     <i class="fa-regular fa-heart m_wishIc"></i>
                     <div class="productImage">
@@ -257,51 +248,7 @@
                         <h6 class="m_Ttl">German Shepherd</h6>
                     </div>
                 </div>
-            </a>
-            <a class="ProductWrapper " href="dog_view.html">
-                <div class="product">
-                    <i class="fa-regular fa-heart m_wishIc"></i>
-                    <div class="productImage">
-                        <img src="user-side/img/hd2.png" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="productDetail">
-                        <h6 class="m_Ttl">Poodle</h6>
-                    </div>
-                </div>
-            </a>
-            <a class="ProductWrapper " href="dog_view.html">
-                <div class="product">
-                    <i class="fa-regular fa-heart m_wishIc"></i>
-                    <div class="productImage">
-                        <img src="user-side/img/hd3.png" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="productDetail">
-                        <h6 class="m_Ttl">Bulldog</h6>
-                    </div>
-                </div>
-            </a>
-            <a class="ProductWrapper " href="dog_view.html">
-                <div class="product">
-                    <i class="fa-regular fa-heart m_wishIc"></i>
-                    <div class="productImage">
-                        <img src="user-side/img/hd4.png" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="productDetail">
-                        <h6 class="m_Ttl">Pomeranian</h6>
-                    </div>
-                </div>
-            </a>
-            <a class="ProductWrapper " href="dog_view.html">
-                <div class="product">
-                    <i class="fa-regular fa-heart m_wishIc"></i>
-                    <div class="productImage">
-                        <img src="user-side/img/hd5.png" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="productDetail">
-                        <h6 class="m_Ttl">Belgian Shepherd</h6>
-                    </div>
-                </div>
-            </a>
+            </a> --}}
         </div>
     </div>
 </section>

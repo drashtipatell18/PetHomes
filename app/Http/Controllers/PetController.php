@@ -33,11 +33,13 @@ class PetController extends Controller
             'place' => 'required',
         ]);
 
-        $filename = '';
+        $filename = [];
         if ($request->hasFile('image')){
-            $image = $request->file('image');
-            $filename = time() . '.' . $image->getClientOriginalExtension();
-            $image->move('images', $filename);
+            foreach ($request->file('image') as $image) {
+                $fname = time() . '_' . uniqid() . '.' . $image->getClientOriginalExtension();
+                $image->move('images', $fname);
+                $filename[] = $fname;
+            }
         }
 
         $pet = Pet::create([
@@ -48,7 +50,7 @@ class PetController extends Controller
             'age'              => $request->input('age'),
             'health_info'      => $request->input('health_info'),
             'place'            => $request->input('place'),
-            'image'            => $filename
+            'image'            => implode(',', $filename)
 
         ]);
 
@@ -76,10 +78,19 @@ class PetController extends Controller
         ]);
         $pets = Pet::find($id);
         if ($request->hasFile('image')) {
-            $image = $request->file('image');
-            $filename = time() . '.' . $image->getClientOriginalExtension();
-            $image->move('images', $filename);
-            $pets->image = $filename;
+            // $image = $request->file('image');
+            // $filename = time() . '.' . $image->getClientOriginalExtension();
+            // $image->move('images', $filename);
+            // $pets->image = $filename;
+            $filename = [];
+            if ($request->hasFile('image')){
+                foreach ($request->file('image') as $image) {
+                    $fname = time() . '_' . uniqid() . '.' . $image->getClientOriginalExtension();
+                    $image->move('images', $fname);
+                    $filename[] = $fname;
+                }
+                $pets->image = implode(',', $filename);
+            }
         }
         $pets->update([
             'user_id'          => $request->input('user_id'),

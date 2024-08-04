@@ -21,6 +21,7 @@ return new class extends Migration
             $table->longText('health_info')->nullable();
             $table->string('place')->nullable();
             $table->string('image')->nullable();
+            $table->decimal('price', 18, 2)->nullable();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
             $table->timestamps();

@@ -40,7 +40,7 @@ const recommendedprint = () => {
   petdata.forEach((v) => {
     if (count < 15) {
       print += `
-          <a class="ProductWrapper p1 col-sm-6 col-lg-4"> 
+          <a class="ProductWrapper p1 col-sm-6 col-lg-4">
             <div class="product" >
               ${wishlist.find((a) => a.id == v.id) ? '<i class="fa-regular fa-heart m_wishIc" style="color: #ff0000;"></i>' : `<i class="fa-regular fa-heart m_wishIc" onclick="handlewhish('${v.id}')"></i>`}
               <div class="productImage proImgIn" onclick="handledeatails('${v.id}')">
@@ -102,7 +102,7 @@ const popularCat = () => {
 
 const populardog = () => {
   let print = ``;
- 
+
   let dog = petdata.filter((v) => v.type == 'dog');
 
   let dogByBreed = {};
@@ -166,13 +166,13 @@ const handlewhish = async (id) => {
 const handlesearchall = (e) => {
   console.log("dvds");
 
-  const searchData = [...petdata, ...accdata, ...serdata]; 
+  const searchData = [...petdata, ...accdata, ...serdata];
   console.log(searchData);
 
   const searchSuggestionsContainer = document.getElementById('search-suggestions-container');
   const searchSuggestions = document.getElementById('search-suggestions');
     const inputValue = e.target.value.toLowerCase();
-    
+
     const suggestions = searchData.filter((item) => {
       // console.log(item);
       // const itemName = item.name.toLowerCase();
@@ -197,12 +197,12 @@ const handlesearchall = (e) => {
     searchSuggestions.innerHTML = '';
     suggestions.forEach((item, index) => {
       if (index < 6) { // show only 5 suggestions
-        const suggestionHTML = 
+        const suggestionHTML =
           `<li>
             <a href="${getItemPageUrl(item)}">
-              ${item.breed ? `${item.breed}` : ''} 
-              ${item.category ? `${item.category}` : ''} 
-              ${item.sub_category ? `${item.sub_category}` : ''} 
+              ${item.breed ? `${item.breed}` : ''}
+              ${item.category ? `${item.category}` : ''}
+              ${item.sub_category ? `${item.sub_category}` : ''}
               ${item.type ? `${item.type}` : ''}
             </a>
           </li>`
@@ -216,7 +216,7 @@ const handlesearchall = (e) => {
     } else {
       searchSuggestionsContainer.style.display = 'none';
     }
-  
+
 
   searchInput.addEventListener('focus', () => {
     searchSuggestionsContainer.style.display = 'block';
@@ -241,4 +241,4 @@ const handlesearchall = (e) => {
 
 
 
-window.onload = getdata;
+// window.onload = getdata;

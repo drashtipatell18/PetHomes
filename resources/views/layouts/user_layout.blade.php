@@ -1,3 +1,10 @@
+@php
+    use App\Models\Product;
+    use App\Models\Service;
+
+    $allProducts = Product::orderBy('created_at', 'desc')->limit(5)->get();
+    $allServices = Service::orderBy('created_at', 'desc')->limit(5)->get();
+@endphp
 <!doctype html>
 <html class="no-js" lang="zxx">
 
@@ -9,25 +16,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- <link rel="manifest" href="site.webmanifest"> -->
-    <link rel="shortcut icon" type="image/x-icon" href="user-side/img/logobrown.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/user-side/img/logobrown.png">
     <!-- Place favicon.ico in the root directory -->
 
     <!-- CSS here -->
-    <link rel="stylesheet" href="user-side/css/bootstrap.min.css">
-    <link rel="stylesheet" href="user-side/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="user-side/css/magnific-popup.css">
-    <link rel="stylesheet" href="user-side/css/font-awesome.min.css">
-    <link rel="stylesheet" href="user-side/css/themify-icons.css">
-    <link rel="stylesheet" href="user-side/css/nice-select.css">
-    <link rel="stylesheet" href="user-side/css/flaticon.css">
-    <link rel="stylesheet" href="user-side/css/gijgo.css">
-    <link rel="stylesheet" href="user-side/css/animate.css">
-    <link rel="stylesheet" href="user-side/css/slicknav.css">
-    <link rel="stylesheet" href="user-side/css/style.css">
-    <link rel="stylesheet" href="user-side/css/responsive.css">
-    <link rel="stylesheet" href="user-side/css/register.css">
-    <link rel="stylesheet" href="user-side/css/Login.css">
-    <link rel="stylesheet" href="user-side/css/m_style.css">
+    <link rel="stylesheet" href="/user-side/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/user-side/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/user-side/css/magnific-popup.css">
+    <link rel="stylesheet" href="/user-side/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/user-side/css/themify-icons.css">
+    <link rel="stylesheet" href="/user-side/css/nice-select.css">
+    <link rel="stylesheet" href="/user-side/css/flaticon.css">
+    <link rel="stylesheet" href="/user-side/css/gijgo.css">
+    <link rel="stylesheet" href="/user-side/css/animate.css">
+    <link rel="stylesheet" href="/user-side/css/slicknav.css">
+    <link rel="stylesheet" href="/user-side/css/style.css">
+    <link rel="stylesheet" href="/user-side/css/responsive.css">
+    <link rel="stylesheet" href="/user-side/css/register.css">
+    <link rel="stylesheet" href="/user-side/css/Login.css">
+    <link rel="stylesheet" href="/user-side/css/m_style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -56,7 +63,7 @@
                         <div class="col-10  col-xl-2 col-lg-1 d-flex justify-content-between">
                             <div class="logo-img">
                                 <a href="{{route('user.dashboard')}}">
-                                    <img class="logo_img" src="user-side/img/logobrown.png" alt="">
+                                    <img class="logo_img" src="/user-side/img/logobrown.png" alt="">
                                 </a>
                             </div>
                             <div class="book_room justify-content-end d-lg-none">
@@ -116,7 +123,7 @@
                                         <li><a class="active m_hActive" href="{{route('user.dashboard')}}">home</a></li>
                                         <li><a href="#">Accessories <i class="ti-angle-down"></i></a>
                                             <ul class="submenu">
-                                                <li><a href="dog_accessories.html?acc=All">All Accessories</a></li>
+                                                {{-- <li><a href="dog_accessories.html?acc=All">All Accessories</a></li>
                                                 <li><a href="dog_accessories.html?acc=Dog">Dogs Accessories</a></li>
                                                 <li><a href="dog_accessories.html?acc=Cat">Cats Accessories</a></li>
                                                 <li><a href="dog_accessories.html?acc=Rabbit">Rabbit Accessories</a>
@@ -124,12 +131,19 @@
                                                 <li><a href="dog_accessories.html?acc=Birds">Birds Accessories</a></li>
                                                 <li><a href="dog_accessories.html?acc=Fish">Fish Accessories</a></li>
                                                 <li><a href="dog_accessories.html?acc=Horses">Horse Accessories </a>
+                                                </li> --}}
+                                                @foreach ($allProducts as $pro)
+                                                <li>
+                                                    <a href="/products">
+                                                        {{$pro->name}}
+                                                    </a>
                                                 </li>
+                                                @endforeach
                                             </ul>
                                         </li>
                                         <li><a href="#">Services <i class="ti-angle-down"></i></a>
                                             <ul class="submenu">
-                                                <li><a href="services.html?serv=All">All Services</a></li>
+                                                {{-- <li><a href="services.html?serv=All">All Services</a></li>
                                                 <li><a href="services.html?serv=jobs">Animal jobs</a></li>
                                                 <li><a href="services.html?serv=Holidays">Holidays for pets</a></li>
                                                 <li><a href="services.html?serv=Boarding">Boarding</a></li>
@@ -139,10 +153,17 @@
                                                 <li><a href="services.html?serv=Horse">Horse Share</a></li>
                                                 <li><a href="services.html?serv=Pasture">Pasture</a></li>
                                                 <li><a href="services.html?serv=Riding">Riding Holidays</a></li>
-                                                <li><a href="services.html?serv=Training">Training</a></li>
+                                                <li><a href="services.html?serv=Training">Training</a></li> --}}
+                                                @foreach ($allServices as $ser)
+                                                <li>
+                                                    <a href="/services">
+                                                        {{$ser->name}}
+                                                    </a>
+                                                </li>
+                                                @endforeach
                                             </ul>
                                         </li>
-                                        <li><a href="contact_us.html">Contact Us</a></li>
+                                        <li><a href="{{route('user.contact')}}">Contact Us</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -171,18 +192,18 @@
                                             </a>
                                             <ul class="submenu m_submenu p-0">
                                                 <!-- <li><a href="profile.html">My Account</a></li> -->
-                                                <li><a href="./profile.html">My Account</a></li>
-                                                <li><a href="profile.html">My Adverts</a></li>
-                                                <li><a>Saved Search Alerts</a></li>
-                                                <li><a data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+                                                <li class="{{(!Auth::check())?'d-none':''}}"><a href="/profile">My Account</a></li>
+                                                <li class="{{(!Auth::check())?'d-none':''}}"><a href="#">My Adverts</a></li>
+                                                <li class="{{(!Auth::check())?'d-none':''}}"><a>Saved Search Alerts</a></li>
+                                                <li class="{{(Auth::check())?'d-none':''}}"><a data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
                                                 </li>
-                                                <li><a data-bs-toggle="modal" data-bs-target="#staticBackdropLogOut">Log
+                                                <li class="{{(!Auth::check())?'d-none':''}}"><a data-bs-toggle="modal" data-bs-target="#staticBackdropLogOut">Log
                                                         out</a>
                                                 </li>
                                             </ul>
                                         </li>
 
-                                        <li>
+                                        <li class="{{(!Auth::check())?'d-none':''}}">
                                             <a href="wishlist.html">
                                                 <i class="fa-regular fa-heart"></i>
                                             </a>
@@ -219,8 +240,7 @@
                 </div>
                 <div class="modal-footer" style="justify-content: center; border: none;">
                     <button type="button" class="btn_cancel" data-bs-dismiss="modal">Cancel</button>
-                    <button type="submit" class="btn_sub" data-bs-toggle="modal"
-                        data-bs-target="#loginModal">Yes</button>
+                    <a href="{{route('user.logout')}}" class="btn_sub">Yes</a>
                 </div>
             </div>
         </div>
@@ -234,35 +254,41 @@
                 <div class="modal-body m_lrModal">
                     <section class="Login_form">
                         <div class="inner-box rounded-3  text-dark m-0">
-                            <h2 class="text-center text-light fw-bolder">Login </h2>
-                            <p class="text-light text-center">How to i get started lorem ipsum dolor at?</p>
-                            <form class="">
+                            <h2 class="text-center text-dark fw-bolder">Login </h2>
+                            <p class="text-dark text-center">How to i get started lorem ipsum dolor at?</p>
+                            <form class="" method="post" action="{{route('user.login')}}">
+                                @csrf
                                 <div class="mb-3 field">
                                     <div class="input-group mb-3 m_lrGrp">
-                                        <div class="input-group-append">
+                                        <div class="input-group-append bg-dark">
                                             <span class="input-group-text input_custom_eye" id="basic-addon2">
-                                                <img src="user-side/img/email.svg" alt="">
+                                                <img src="/user-side/img/email.svg" alt="">
                                             </span>
                                         </div>
-                                        <input type="email" class="form-control input_custom m_eLo"
-                                            id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" />
+                                        <input value="{{old('loginemail')}}" type="email" class="form-control input_custom m_eLo" id="email" name="loginemail" placeholder="Email" />
                                     </div>
+                                    @error('loginemail')
+                                        <span class="text-danger">{{$errors->first('loginemail')}}</span>
+                                    @enderror
+                                    @if (session('loginError'))
+                                        <span class="text-danger">{{session('loginError')}}</span>
+                                    @endif
                                 </div>
-                                <img src="user-side/img/horse5.jpg" alt="" srcset="">
                                 <div class="mb-0 field">
                                     <div class="input-group mb-0 m_lrGrp">
-                                        <div class="input-group-append">
+                                        <div class="input-group-append bg-dark">
                                             <span class="input-group-text input_custom_eye" id="basic-addon2">
-                                                <img src="user-side/img/password.svg" alt="">
+                                                <img src="/user-side/img/password.svg" alt="">
                                             </span>
                                         </div>
-                                        <input type="text" class="form-control input_custom m_eLo"
-                                            placeholder="Password" aria-label="Recipient's username"
-                                            aria-describedby="basic-addon2">
+                                        <input type="password" class="form-control input_custom m_eLo" placeholder="Password" id="password" name="password">
                                     </div>
+                                    @error('password')
+                                        <span class="text-danger">{{$errors->first('password')}}</span>
+                                    @enderror
                                 </div>
                                 <div class="password mt-1 text-end fw-bolder">
-                                    <a class="forgot_pass text-light">Forget your password?</a>
+                                    <a class="forgot_pass text-dark">Forget your password?</a>
                                 </div>
                                 <div class="mb-3 d-flex justify-content-center">
                                     <button type="submit" class="btn text-white align-items-center m_subBtn">
@@ -279,20 +305,19 @@
                                 <div class="follow_btn_group">
                                     <div class="follow_btn">
                                         <a>
-                                            <img src="user-side/img/google 1.svg" alt="">
+                                            <img src="/user-side/img/google 1.svg" alt="">
                                             Login with google
                                         </a>
                                     </div>
                                     <div class="follow_btn">
                                         <a>
-                                            <img src="user-side/img/facebook 1.svg" alt="">
+                                            <img src="/user-side/img/facebook 1.svg" alt="">
                                             Login with Facebook
                                         </a>
                                     </div>
                                 </div>
                                 <p class="text-center font_size_10 text-light">Don’t have an account? <span
-                                        style="color: black;cursor: pointer; text-decoration: underline;"
-                                        data-bs-toggle="modal" data-bs-target="#registerModal"> Register</span></p>
+                                        style="color: black;cursor: pointer; text-decoration: underline;" onclick="$('#registerModal').modal('show');$('#loginModal').modal('hide')"> Register</span></p>
                             </form>
                         </div>
                     </section>
@@ -309,41 +334,91 @@
                 <div class="modal-body m_lrModal">
                     <section class="Login_form">
                         <div class="inner-box rounded-3  text-dark m-0">
-                            <h2 class="text-center text-light fw-bolder">Register </h2>
-                            <p class="text-light text-center">How to i get started lorem ipsum dolor at?</p>
-                            <form class="">
+                            <h2 class="text-center text-dark fw-bolder">Register </h2>
+                            <p class="text-dark text-center">How to i get started lorem ipsum dolor at?</p>
+                            <form enctype="multipart/form-data" class="text-dark" method="POST" action="{{route('user.register')}}">
+                                @csrf
                                 <div class="mb-3 field">
                                     <div class="input-group mb-3 m_lrGrp">
                                         <div class="input-group-append">
-                                            <span class="input-group-text input_custom_eye" id="basic-addon2">
-                                                <img src="user-side/img/password.svg" alt="">
+                                            <span class="bg-dark input-group-text input_custom_eye" id="basic-addon2">
+                                                <img src="/user-side/img/profile_register.png" alt="">
                                             </span>
                                         </div>
-                                        <input type="email" class="form-control input_custom" id="exampleInputEmail1"
-                                            aria-describedby="emailHelp" placeholder="Email" />
+                                        <input type="file" accept="image/*" class="form-control input_custom" id="registerProfilePic" name="registerProfilePic" placeholder="Name" />
                                     </div>
+                                    @error('registerProfilePic')
+                                    <span class="text-danger">{{$errors->first('registerProfilePic')}}</span>
+                                    @enderror
                                 </div>
                                 <div class="mb-3 field">
                                     <div class="input-group mb-3 m_lrGrp">
                                         <div class="input-group-append">
-                                            <span class="input-group-text input_custom_eye" id="basic-addon2">
-                                                <img src="user-side/img/call.svg" alt="">
+                                            <span class="bg-dark input-group-text input_custom_eye" id="basic-addon2">
+                                                <img src="/user-side/img/people.png" alt="">
                                             </span>
                                         </div>
-                                        <input type="email" class="form-control input_custom " id="exampleInputEmail1"
+                                        <input value="{{old('registerName')}}" type="text" class="form-control input_custom" id="registerName" name="registerName" placeholder="Name" />
+                                    </div>
+                                    @error('registerName')
+                                    <span class="text-danger">{{$errors->first('registerName')}}</span>
+                                    @enderror
+                                </div>
+                                <div class="mb-3 field">
+                                    <div class="input-group mb-3 m_lrGrp">
+                                        <div class="input-group-append">
+                                            <span class="bg-dark input-group-text input_custom_eye" id="basic-addon2">
+                                                <img src="/user-side/img/email.svg" alt="">
+                                            </span>
+                                        </div>
+                                        <input value="{{old('registerEmail')}}" type="email" class="form-control input_custom" id="registerEmail" name="registerEmail"
+                                            aria-describedby="emailHelp" placeholder="Email" />
+                                    </div>
+                                    @error('registerEmail')
+                                    <span class="text-danger">{{$errors->first('registerEmail')}}</span>
+                                    @enderror
+                                </div>
+                                <div class="mb-3 field">
+                                    <div class="input-group mb-3 m_lrGrp">
+                                        <div class="input-group-append">
+                                            <span class="bg-dark input-group-text input_custom_eye" id="basic-addon2">
+                                                <img src="/user-side/img/call.svg" alt="">
+                                            </span>
+                                        </div>
+                                        <input value="{{old('registerPhone')}}" type="number" class="form-control input_custom " id="registerPhone" name="registerPhone"
                                             aria-describedby="emailHelp" placeholder="Phone" />
                                     </div>
+                                    @error('registerPhone')
+                                    <span class="text-danger">{{$errors->first('registerPhone')}}</span>
+                                    @enderror
+                                </div>
+                                <div class="mb-3 field">
+                                    <div class="input-group mb-0 m_lrGrp">
+                                        <div class="input-group-append">
+                                            <span class="bg-dark input-group-text input_custom_eye" id="basic-addon2">
+                                                <img src="/user-side/img/password.svg" alt="">
+                                            </span>
+                                        </div>
+                                        <input type="password" id="registerPassword" name="registerPassword" class="form-control input_custom" placeholder="Password"
+                                            aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                    </div>
+                                    @error('registerPassword')
+                                    <span class="text-danger">{{$errors->first('registerPassword')}}</span>
+                                    @enderror
                                 </div>
                                 <div class="mb-0 field">
                                     <div class="input-group mb-0 m_lrGrp">
                                         <div class="input-group-append">
-                                            <span class="input-group-text input_custom_eye" id="basic-addon2">
-                                                <img src="user-side/img/password.svg" alt="">
+                                            <span class="bg-dark input-group-text input_custom_eye" id="basic-addon2">
+                                                <img src="/user-side/img/address.png" alt="">
                                             </span>
                                         </div>
-                                        <input type="text" class="form-control input_custom" placeholder="Password"
+                                        <input value="{{old('registerAddress')}}" type="text" id="registerAddress" name="registerAddress" class="form-control input_custom" placeholder="Address"
                                             aria-label="Recipient's username" aria-describedby="basic-addon2">
                                     </div>
+                                    @error('registerAddress')
+                                    <span class="text-danger">{{$errors->first('registerAddress')}}</span>
+                                    @enderror
                                 </div>
                                 <div class="my-5 d-flex justify-content-center">
                                     <button type="submit" class="btn text-white align-items-center m_subBtn">
@@ -373,7 +448,7 @@
                 </div>
                 <div class="modal-body text-center m_aaModBo">
                     <div class="m_aaimg">
-                        <img src="user-side/img/aa_img.png" alt="">
+                        <img src="/user-side/img/aa_img.png" alt="">
                     </div>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at fermentum magna. </p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at fermentum magna. </p>
@@ -408,7 +483,7 @@
                 </div>
                 <div class="modal-body text-center m_aaModBo">
                     <div class="m_aaimg">
-                        <img src="user-side/img/aa_img.png" alt="">
+                        <img src="/user-side/img/aa_img.png" alt="">
                     </div>
                     <p>We are automatically detection a SMA send to your<br>
                         mobile number</p>
@@ -449,41 +524,41 @@
         <div class="container">
             <div class="m_fTop row d-flex justify-content-around">
                 <div class="m_ftcon col-md-4 col-sm-6 text-center">
-                    <img src="user-side/img/ft1.svg" alt="">
+                    <img src="/user-side/img/ft1.svg" alt="">
                     <h6 class="mb-0 mt-3">Home of pet Payments</h6>
                     <p> simply dummy text of the printing </p>
                 </div>
                 <div class="m_ftcon col-md-4 col-sm-6 text-center">
-                    <img src="user-side/img/ft2.svg" alt="">
+                    <img src="/user-side/img/ft2.svg" alt="">
                     <h6 class="mb-0 mt-3">Robust ID verification</h6>
                     <p>  simply dummy text of the printing </p>
                 </div>
                 <div class="m_ftcon col-md-4 col-sm-6 text-center">
-                    <img src="user-side/img/ft3.svg" alt="">
+                    <img src="/user-side/img/ft3.svg" alt="">
                     <h6 class="mb-0 mt-3">Trust and safety team</h6>
                     <p> simply dummy text of the printing </p>
                 </div>
             </div>
         </div>
         <div class="m_fBot">
-            <img class="m_fPaw" src="user-side/img/paw-footer.png" alt="">
+            <img class="m_fPaw" src="/user-side/img/paw-footer.png" alt="">
             <div class="container">
                 <div class="row" style=" padding: 70px 0;">
                     <div class="col-lg-4 col-sm-6">
                         <a href="{{route('user.dashboard')}}">
-                            <img src="user-side/img/footer_logo.svg" alt="">
+                            <img src="/user-side/img/footer_logo.svg" alt="">
                             <h6 class="m_fTtl">Pet Homes</h6>
                         </a>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at fermentum magna. </p>
                         <div class="m_soc d-flex gap-3">
                             <a href="https://www.facebook.com/login/" class="text-decoration-none"><img
-                                    src="user-side/img/f_social1.svg" alt=""></a>
+                                    src="/user-side/img/f_social1.svg" alt=""></a>
                             <a href="https://www.instagram.com/accounts/login/" class="text-decoration-none"><img
-                                    src="user-side/img/f_social2.svg" alt=""></a>
+                                    src="/user-side/img/f_social2.svg" alt=""></a>
                             <a href="https://x.com/twitt_login?lang=en" class="text-decoration-none"><img
-                                    src="user-side/img/f_social3.svg" alt=""></a>
+                                    src="/user-side/img/f_social3.svg" alt=""></a>
                             <a href="https://www.linkedin.com/login" class="text-decoration-none"><img
-                                    src="user-side/img/f_social4.svg" alt=""></a>
+                                    src="/user-side/img/f_social4.svg" alt=""></a>
                         </div>
                     </div>
                     <div class="col-lg-2 col-sm-6 m_fLinks">
@@ -520,7 +595,7 @@
 
             <div class="row">
                 <div class="col-lg-4 col-sm-6" style="position: relative;">
-                    <img class="m_fDog" src="user-side/img/footer_dog.png" alt="">
+                    <img class="m_fDog" src="/user-side/img/footer_dog.png" alt="">
                 </div>
                 <div class="col-lg-8 col-sm-6 m_fcon ">
                     <hr style="color: #9D9D9D;">
@@ -534,34 +609,34 @@
 
     <!-- link that opens popup -->
     <!-- JS here -->
-    <script src="user-side/js/vendor/modernizr-3.5.0.min.js"></script>
-    <script src="user-side/js/vendor/jquery-1.12.4.min.js"></script>
-    <script src="user-side/js/popper.min.js"></script>
-    <script src="user-side/js/bootstrap.min.js"></script>
-    <script src="user-side/js/owl.carousel.min.js"></script>
-    <script src="user-side/js/isotope.pkgd.min.js"></script>
-    <script src="user-side/js/ajax-form.js"></script>
-    <script src="user-side/js/waypoints.min.js"></script>
-    <script src="user-side/js/jquery.counterup.min.js"></script>
-    <script src="user-side/js/imagesloaded.pkgd.min.js"></script>
-    <script src="user-side/js/scrollIt.js"></script>
-    <script src="user-side/js/jquery.scrollUp.min.js"></script>
-    <script src="user-side/js/wow.min.js"></script>
-    <script src="user-side/js/nice-select.min.js"></script>
-    <script src="user-side/js/jquery.slicknav.min.js"></script>
-    <script src="user-side/js/jquery.magnific-popup.min.js"></script>
-    <script src="user-side/js/plugins.js"></script>
-    <script src="user-side/js/gijgo.min.js"></script>
+    <script src="/user-side/js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="/user-side/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="/user-side/js/popper.min.js"></script>
+    <script src="/user-side/js/bootstrap.min.js"></script>
+    <script src="/user-side/js/owl.carousel.min.js"></script>
+    <script src="/user-side/js/isotope.pkgd.min.js"></script>
+    <script src="/user-side/js/ajax-form.js"></script>
+    <script src="/user-side/js/waypoints.min.js"></script>
+    <script src="/user-side/js/jquery.counterup.min.js"></script>
+    <script src="/user-side/js/imagesloaded.pkgd.min.js"></script>
+    <script src="/user-side/js/scrollIt.js"></script>
+    <script src="/user-side/js/jquery.scrollUp.min.js"></script>
+    <script src="/user-side/js/wow.min.js"></script>
+    <script src="/user-side/js/nice-select.min.js"></script>
+    <script src="/user-side/js/jquery.slicknav.min.js"></script>
+    <script src="/user-side/js/jquery.magnific-popup.min.js"></script>
+    <script src="/user-side/js/plugins.js"></script>
+    <script src="/user-side/js/gijgo.min.js"></script>
 
     <!--contact js-->
-    <script src="user-side/js/contact.js"></script>
-    <script src="user-side/js/jquery.ajaxchimp.min.js"></script>
-    <script src="user-side/js/jquery.form.js"></script>
-    <script src="user-side/js/jquery.validate.min.js"></script>
-    <script src="user-side/js/mail-script.js"></script>
+    <script src="/user-side/js/contact.js"></script>
+    <script src="/user-side/js/jquery.ajaxchimp.min.js"></script>
+    <script src="/user-side/js/jquery.form.js"></script>
+    <script src="/user-side/js/jquery.validate.min.js"></script>
+    <script src="/user-side/js/mail-script.js"></script>
 
-    <script src="user-side/js/main.js"></script>
-    <script src="user-side/js/index.js"></script>
+    <script src="/user-side/js/main.js"></script>
+    <script src="/user-side/js/index.js"></script>
     <script>
         $('#datepicker').datepicker({
             iconsLibrary: 'fontawesome',
@@ -629,6 +704,18 @@
             var selectedHeader = document.querySelector('.pd_header p:nth-child(' + id + ')');
             selectedHeader.classList.add('active_p');
         }
+    </script>
+
+    <script>
+        @if (session('loginError'))
+            $("#loginModal").modal('show');
+        @endif
+        @if ($errors->has('loginemail') || $errors->has('password'))
+            $("#loginModal").modal('show');
+        @endif
+        @if ($errors->has('registerProfilePic') || $errors->has('registerName') || $errors->has('registerEmail') || $errors->has('registerPhone') || $errors->has('registerPassword') || $errors->has('registerAddress'))
+            $("#registerModal").modal('show');
+        @endif
     </script>
 
     @stack('scripts')

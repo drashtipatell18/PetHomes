@@ -159,3 +159,14 @@ Route::get('/chat/destroy/{id}',[ChatController::class,'ChatDestroy'])->name('de
 
 // User Side routes
 Route::get('/home', [UserHomeController::class,'dashboard'])->name('user.dashboard');
+Route::post('/user/login', [UserHomeController::class,'login'])->name('user.login');
+Route::get('/user/logout', [UserHomeController::class,'logout'])->name('user.logout');
+Route::get('/pet/{catid}', [UserHomeController::class,'getPetFromCat']);
+Route::get('/viewpet/{petid}', [UserHomeController::class,'getPet']);
+Route::get('/contact', [UserHomeController::class,'contactUs'])->name('user.contact');
+Route::post('/contact/submit', [UserHomeController::class,'saveContactInfo'])->name('user.contactsave');
+Route::post('/user/register', [UserHomeController::class,'registerUser'])->name('user.register');
+Route::get('/products', [UserHomeController::class,'getProducts']);
+Route::get('/services', [UserHomeController::class,'getServices']);
+Route::get('/profile', [UserHomeController::class,'profile']);
+Route::post('/profile/update', [UserHomeController::class,'profileUpdate'])->name('user.profile.update');

@@ -10,7 +10,7 @@ class Pet extends Model
 {
     use HasFactory, SoftDeletes;
     protected $table = 'pets';
-    protected $fillable = ['user_id', 'category_id', 'name', 'breed', 'age', 'health_info', 'place', 'image'];
+    protected $fillable = ['user_id', 'category_id', 'name', 'breed', 'age', 'health_info', 'place', 'image', 'price'];
 
     public function user()
     {
